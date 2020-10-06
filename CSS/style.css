@@ -91,6 +91,7 @@ input {
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
+
   }
   
   .slider:before {
@@ -136,7 +137,19 @@ input {
   
   /* On mouse-over */
   .btn:hover {background: #eee;}
-  
+
+
+  #orientation>button:hover 
+  {
+    background:  #2196F3;
+   
+  }
+  #orientation>button
+  {
+    padding-left: 10px;
+    margin-right: 20px;
+  }
+ 
   .success {color: rgb(255, 255, 255);}
   .info {color: rgb(255, 255, 255);}
   .warning {color: rgb(255, 255, 255);}
@@ -157,3 +170,4 @@ input {
 
 .default {background-color: #e7e7e7; color: black;} /* Gray */
 .default:hover {background: #ddd;}
+

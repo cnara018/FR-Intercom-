@@ -25,9 +25,46 @@
     </ul>
 </head>
 <body>
-    
+    <div style="margin-left:15%; padding:20px 55px; height:100px;">
+        <h2>Camera</h2>
+        <h4>Live View</h4>
+    <video width="400" controls>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  Your browser does not support HTML video.
+</video><br>
 
+
+<h4>General</h4>
+<div id = reso>
+<label for="resolution">Resolution</label>
+<select name="resolution" id="resolution">
+  <option value="opt1">1280x720 (16:9)</option>
+  <option value="opt2">Saab</option>
+  <option value="opt3">Opel</option>
+  <option value="opt4">Audi</option>
+</select>
+<br><br>
+<label for="framerate">Frame Rate</label>
+<input type="text" id="framerate" name="framerate"> [0-60] fps<br><br>
+
+
+</div>
+<label for="compression">Compression</label>
+<div class="slidecontainer"> 
+        <input type="range" min="0" max="100" value="50">
+       Value: <span id="demo"></span> 
+    </div>
+  <br>
+  <div id = orientation>
+  <h4>Image Orientation</h4>  
+  <label for="rotation">Rotation</label> <button type="button" >0&deg;</button><button type="button" >90&deg;</button><button type="button" >180&deg;</button><button type="button" >270&deg;</button>
+    <br><br><br>
     
-    
+    <label for="mirror">Mirror</label>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label> <br><br><br>
+</div>  
 </body>
 </html>  
