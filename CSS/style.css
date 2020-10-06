@@ -32,7 +32,21 @@ ul {
   }
   h4{
     border-bottom: 2px solid rgb(199, 198, 198);
+    width: 55%;
   
+  }
+  #mydevices>p{
+    position: relative;
+    border-bottom: 2px solid rgb(199, 198, 198);
+    margin-left: 70px;
+    padding-top: 20px;
+    width:40%;
+    
+    
+  }
+  #mydevices>p>button{
+    margin-left: 20px;
+    float: right;
   }
 
 
@@ -113,4 +127,33 @@ input {
   .slider.round:before {
     border-radius: 50%;
   }
+  .btn {
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
   
+  }
+  
+  /* On mouse-over */
+  .btn:hover {background: #eee;}
+  
+  .success {color: rgb(255, 255, 255);}
+  .info {color: rgb(255, 255, 255);}
+  .warning {color: rgb(255, 255, 255);}
+  .danger {color: rgb(255, 255, 255);}
+  .default {color: rgb(255, 255, 255);}
+
+.success {background-color: #4CAF50;} /* Green */
+.success:hover {background-color: #46a049;}
+
+.info {background-color: #2196F3;} /* Blue */
+.info:hover {background: #0b7dda;}
+
+.warning {background-color: #ff9800;} /* Orange */
+.warning:hover {background: #e68a00;}
+
+.danger {background-color: #f44336;} /* Red */
+.danger:hover {background: #da190b;}
+
+.default {background-color: #e7e7e7; color: black;} /* Gray */
+.default:hover {background: #ddd;}
