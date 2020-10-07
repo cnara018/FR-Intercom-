@@ -90,6 +90,20 @@ input {
   
 }
 
+#r
+{
+  float: left;
+}
+select#Security
+{
+  float: left;
+
+}
+
+label#timeoutlbl
+{
+  padding-left: 50px;
+}
 #cameraselection>#imglabel
 {
   margin-left: 20px;
@@ -109,11 +123,10 @@ input#framerate
   width: 20px;
 }
 
-#cameraselection>
+label#intern
 {
-  padding-left: 25px;
-}
 
+}
 
 
   .switch {
