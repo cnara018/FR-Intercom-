@@ -28,7 +28,7 @@
     <div style="margin-left:15%; padding:20px 55px; height:100px;">
         <h2>Camera</h2>
         <h4>Live View</h4>
-    <video width="400" controls>
+    <video width="700" controls>
   <source src="mov_bbb.mp4" type="video/mp4">
   Your browser does not support HTML video.
 </video><br>
@@ -45,7 +45,7 @@
 </select>
 <br><br>
 <label for="framerate">Frame Rate</label>
-<input type="text" id="framerate" name="framerate"> [0-60] fps<br><br>
+<input type="text" id="framerate" name="framerate">&nbsp; [0-60] fps<br><br>
 
 
 </div>
@@ -58,13 +58,31 @@
   <div id = orientation>
   <h4>Image Orientation</h4>  
   <label for="rotation">Rotation</label> <button type="button" >0&deg;</button><button type="button" >90&deg;</button><button type="button" >180&deg;</button><button type="button" >270&deg;</button>
-    <br><br><br>
+    <br><br>
     
     <label for="mirror">Mirror</label>
     <label class="switch">
       <input type="checkbox">
       <span class="slider round"></span>
-    </label> <br><br><br>
+    </label> <br><br>
 </div>  
+
+  <h4>Camera Selection</h4> 
+  <div id= cameraselection>
+  <input type="radio" id="internal" name="internal" value="Internal">
+  <label for="male" id = "intern">Internal</label><br>
+  <input type="radio" id="external" name="external" value="external">
+  <label for="female" id = "extern">External</label><br>
+  <label for="imagemode" id = imglabel >Image mode</label>
+<select name="imagemode" id="imagemode">
+  <option value="opt1">Color Mode</option>
+  <option value="opt2">IR 18:00</option>
+  <option value="opt3">Regular 08:00</option>
+ </select>
+<br>
+  </div>
+
+ 
+</div>
 </body>
 </html>  
