@@ -89,21 +89,36 @@ input {
 
   
 }
-
-#r
+input#Encryption
 {
-  float: left;
-}
-select#Security
-{
-  float: left;
-
+  width: 140px;
 }
 
 label#timeoutlbl
 {
-  padding-left: 50px;
+  margin-right: -50px;
 }
+
+input#timeout
+{
+  margin-left: -55px;
+
+}
+#r
+{
+  float: left;
+}
+select#Security,select#Quality,select#Sensitivity,select#Rotation,select#Accuracyspeed
+{
+  float: left;
+  width: 150px;
+}
+select#spoofthreshold
+{
+  margin-left: -70px;
+
+}
+
 #cameraselection>#imglabel
 {
   margin-left: 20px;
@@ -123,8 +138,9 @@ input#framerate
   width: 20px;
 }
 
-label#intern
+label#latencyswitch.switch,label#spoofswitch.switch,label#senseswitch.switch,label#latencyswitch.switch,label#guideswitch.switch
 {
+margin-left: -60px;
 
 }
 
