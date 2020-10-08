@@ -9,12 +9,11 @@
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     
     
-    <title>FR Intercom - Services</title>
+    <title>Device Settings - Services</title>
 
     <ul>
-        <h2 id = nav >FR Intercom</h2>
+        <h2 id = nav >Device Settings</h2>
       <li><a href="Network.html">Network</a></li>
-      <li><a href="Bluetooth.html">Bluetooth</a></li>
       <li><a href="SIP.html">SIP</a></li>
       <li><a href="Camera.html">Camera</a></li>
       <li><a href="Biometric.html">Biometric</a></li>
@@ -26,8 +25,57 @@
 </head>
 <body>
     
+  <div style="margin-left:15%; padding:20px 55px; height:100px;">
+    <h2>Services</h2>
+    <h4>Monitoring Services</h4>
+    <label for="macAddname">IP Address</label>
+    <input type="text" id="serviceaddress" name="serviceaddress"><br><br>
+    <label for="devName">Port</label>
+    <input type="text" id="monitoringport" name="monitoringport"><br><br><br><br>
+    
+    <label for="regularconnection">Access Granted</label>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label> <br><br><br>
+
+    <label for="sslconnection">Access Denied</label>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label><br><br><br>
 
     
+    <label for="regularconnection">Alarm </label>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label> <br><br><br>
+
+    <label for="sslconnection">Failure</label>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label><br><br><br>
     
+    <label for="regularconnection">Door Status</label>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label> <br><br><br>
+
+    <label for="sslconnection">Enrollment</label>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label><br><br><br><br>
+    <button id = "clear" >Clear Cache</button>
+    <br><br>
+
+    <h4>PC Identification</h4>
+    <label for="macAddname">IP Address</label>
+    <input type="text" id="pcidaddress" name="pciaddress"><br><br>
+    <label for="devName">Port</label>
+    <input type="text" id="pcport" name="pcport"><br><br>
 </body>
 </html>  
