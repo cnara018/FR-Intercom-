@@ -24,9 +24,86 @@
     </ul>
 </head>
 <body>
+  <div style="margin-left:15%; padding:20px 55px; height:100px;">
+    <h2>Access Control</h2>
+    <h4>General</h4>
+
+
+
+    <h4>Relay Timing</h4>
+
+    <label for="striketime">Strike Time</label>
+    <input type="text" id="relaytiming" name="striketime">&nbsp;
+    <label for="striketimeext">Strike Time extended</label>
+    <input type="text" id="relaytiming" name="striketimeext">&nbsp;<br><br>
+
+    <label for="doorheld">Door Held Time</label>
+    <input type="text" id="relaytiming" name="doorheld">&nbsp;
+    <label for="doorheldext">Door Held Time extended</label>
+    <input type="text" id="relaytiming" name="doorheldext">&nbsp;<br><br>
+
+
+
+
+
+
+    <h4>Secure I/O</h4>
+    <label for="ipaddress">IP Address</label>
+    <input type="text" id="secureio" name="ipaddress"><br><br>
+    <label for="port">Port</label>
+    <input type="text" id="secureio" name="ipaddress"><br><br>
+
+
+    <label for="Security" id=SecureIOaddress>Connection Type</label>
+    <select name="Security" id="SecureIOaddress">
+      <option value="opt1">Network</option>
+      <option value="opt2">RS485</option>
+    </select> <br><br>
+    <label for="Security" id=SecureIObehavior>Behavior</label>
+    <select name="Security" id="SecureIObehavior">
+      <option value="opt1">Master</option>
+      <option value="opt2">Slave</option>
+    </select>
+    <br><br>
+
+
+    <h4>Inputs</h4>
     
+    <label for="regularconnection">Exit Push Button</label>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label> <br><br><br>
+
+    <label for="sslconnection">Door Status</label>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label><br><br><br>
 
     
+    <label for="regularconnection">Breaking Glass </label>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label> <br><br><br>
+
+    <label for="sslconnection">Fire Alarm</label>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label><br><br><br>
+    
+    <h4>RS232/RS485</h4>
+    <h4>Wiegand</h4>  
+    <h4>Wiegand Output</h4>
+
+
+
+
+
+  </div>
+       
     
 </body>
 </html>  

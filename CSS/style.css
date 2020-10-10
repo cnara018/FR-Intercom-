@@ -148,7 +148,14 @@ label#latencyswitch.switch,label#spoofswitch.switch,label#senseswitch.switch,lab
 margin-left: -60px;
 }
 
-
+input#relaytiming
+{
+  width: 20px;
+}
+select#SecureIObehavior,select#SecureIOaddress
+{
+  width: 100px;
+}
 #clear
 {
   width: 100px;
