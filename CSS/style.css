@@ -94,6 +94,10 @@ input#Encryption
   width: 140px;
 }
 
+label#regswitch.switch,label#sslswitch.switch
+{
+  margin-right: -50px;
+}
 label#timeoutlbl
 {
   margin-right: -50px;
@@ -111,11 +115,12 @@ input#timeout
 select#Security,select#Quality,select#Sensitivity,select#Rotation,select#Accuracyspeed
 {
   float: left;
-  width: 150px;
+  width: 148px;
 }
-select#spoofthreshold
+input#spoofthreshold
 {
   margin-left: -70px;
+  width: 60px
 
 }
 
@@ -146,11 +151,11 @@ margin-left: -60px;
 
 #clear
 {
-  width: 110px;
-  height:40px;
+  width: 100px;
+  height:35px;
   background-color: #2196F3;
   color: rgb(255, 255, 255);
-  margin-left: 200px;
+  margin-left: 275px;
   font-family: Verdana, sans-serif;
 
 }
@@ -161,8 +166,8 @@ margin-left: -60px;
   .switch {
     position: relative;
     display: inline-block;
-    width: 20px;
-    height: 28px;
+    width: 15px;
+    height: 27px;
     size: 30px;
   }
   
