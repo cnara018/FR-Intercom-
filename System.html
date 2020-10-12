@@ -1,32 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    
-    
-    <title>Device Settings - System</title>
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
 
-    <ul>
-        <h2 id = nav >Device Settings</h2>
-      <li><a href="Network.html">Network</a></li>
-      <li><a href="SIP.html">SIP</a></li>
-      <li><a href="Camera.html">Camera</a></li>
-      <li><a href="Biometric.html">Biometric</a></li>
-      <li><a href="Accesscontrol.html">Access Control</a></li>
-      <li><a href="Services.html">Services</a></li>
-      <li><a href="System.html">System</a></li>
 
-    </ul>
+  <title>Device Settings - System</title>
+
+  <ul>
+    <h2 id=nav>Device Settings</h2>
+    <li><a href="Network.html">Network</a></li>
+    <li><a href="SIP.html">SIP</a></li>
+    <li><a href="Camera.html">Camera</a></li>
+    <li><a href="Biometric.html">Biometric</a></li>
+    <li><a href="Accesscontrol.html">Access Control</a></li>
+    <li><a href="Services.html">Services</a></li>
+    <li><a href="System.html">System</a></li>
+
+  </ul>
 </head>
-<body>
-    
 
-    
-    
+<body>
+
+  <div style="margin-left:15%; padding:20px 55px; height:100px;">
+    <h2>System</h2>
+    <h4>Date/Time</h4>
+
+    <label for="Manual">Manual</label>
+    <label class="switch">
+      <input type="checkbox" />
+      <span class="slider round"></span>
+    </label>
+
+    <label for="Security" id="SecureIOaddress" style="font-size: medium;margin-left: 250px;">NTP Settings</label>
+
+    <br><br>
+
+
+    <form action="/action_page.php">
+      <label for="Date">Date</label>
+      <input type="date" id="Date" name="Date">
+    </form>
+
+    <label for="NTPipaddress" style="margin-left:30px">NTP Server IP</label>
+    <input type="text" id="secureio" name="ipaddress" style="width: 132px;">
+    <br><br>
+
+
+    <form action="/action_page.php">
+      <label for="time">Time</label>
+      <input type="time" style="width: 158px;" id="time" name="time">
+    </form>
+
+    <label for="Security" id=Security style="margin-left:30px">Time Zone</label>
+    <select name="Security" id="Security">
+      <option value="opt1">GMT-5 Eastern(New York)</option>
+      <option value="opt2">Enhanced</option>
+      <option value="opt3">Maximum</option>
+    </select>
+    <br><br>
+
+    <label for="Manual">24 hour clock</label>
+    <label class="switch">
+      <input type="checkbox" />
+      <span class="slider round"></span>
+    </label>
+
+    <label for="Manual" style="margin-left: 151px;">Use Daylight Savings</label>
+    <label class="switch">
+      <input type="checkbox" />
+      <span class="slider round"></span>
+    </label>
+
+    <br><br>
+
+
+
+
+
+    <h4>Language</h4>
+
+    <label for="Security" id="SecureIObehavior">Select Language</label>
+    <select name="Security" id="SecureIObehavior">
+      <option value="opt1">English</option>
+      <option value="opt2">Spanish</option>
+      <option value="opt3">French</option>
+      <option value="opt4">German</option>
+      <option value="opt5">Japanese</option>
+
+    </select>
+
+    <h4>Sounds</h4>
+
+    <form action="/action_page.php">
+      <label for="myfile">Access Granted</label>
+      <input type="file" id="myfile" name="myfile">
+    </form> <br> <br>
+
+    <form action="/action_page.php">
+      <label for="myfile">Access Denied</label>
+      <input type="file" id="myfile" name="myfile">
+    </form> <br> <br>
+
+    <form action="/action_page.php">
+      <label for="myfile">Alert</label>
+      <input type="file" id="myfile" name="myfile">
+    </form> <br> <br>
+
+    <form action="/action_page.php">
+      <label for="myfile">Incoming Call</label>
+      <input type="file" id="myfile" name="myfile">
+    </form> <br> <br>
+
+    <label for="timeout" id="timeoutlbl">Volume</label>
+    <div class="slidecontainer">
+      <input id="timeout" type="range" style="margin-left: 45px;" min="0" max="100" value="50">
+      <span id="demo"></span>
+    </div>
+
+    <br><br>
+
+    <h4>Users</h4>
+
+
+    <select name="Users" size="10" style="width:175px;margin-left: 130px">
+      <option value="Admin"> Admin </option>
+      <option value="Steve"> Steve </option>
+      <option value="John">John </option>
+      <option value="Ross"> Ross </option>
+      <option value="Billy"> Billy </option>
+      <option value="Bob"> Bob </option>
+    </select>
+    <br><br>
+    <button id= "users" style="width: 55px;height:35px;background-color: #2196F3;color: rgb(255, 255, 255);margin-left: 130px">Add</button>
+    <button id= "users" style="width: 55px;height:35px;background-color: #2196F3;color: rgb(255, 255, 255);">Edit</button> 
+    <button id= "users" style="width: 55px;height:35px;background-color: #2196F3;color: rgb(255, 255, 255);">Delete</button>
+    <br><br>
+
+    <h4>Maintenance</h4>
+
+    <button id= "users" style="width: 90px;height:35px;background-color: #2196F3;color: rgb(255, 255, 255);float: left; margin-left: 130px;">Reboot</button>
+    <button id= "users" style="width: 90px;height:35px;background-color: #2196F3;color: rgb(255, 255, 255); margin-left: 20px;">Factory Reset</button> 
+    <br><br><br>
+
+    <label for="Firmwareversion" style="float: left;">Firmware Version</label>
+    <input type="text" id="firmware" value="FW 15.05.200" readonly>
+    <br><br>
+
+    <form action="/action_page.php">
+      <label for="myfile">Firmware Update</label>
+      <input type="file" id="myfile" name="myfile">
+    </form> <br> <br>
+    <h4></h4>
+
+
+
+  </div>
+
 </body>
-</html>  
+
+</html>

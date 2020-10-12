@@ -166,7 +166,7 @@ select#SecureIObehavior,select#SecureIOaddress
   font-family: Verdana, sans-serif;
 
 }
-#clear:active {
+#clear,#users:active {
   box-shadow: 0 2px rgb(78, 75, 75);
   transform: translateY(2px);
 }
