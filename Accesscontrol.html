@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    
-    
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+
     <title>Device Settings - Access Control</title>
 
     <ul>
-        <h2 id = nav >Device Settings</h2>
+      <h2 id="nav">Device Settings</h2>
       <li><a href="Network.html">Network</a></li>
       <li><a href="SIP.html">SIP</a></li>
       <li><a href="Camera.html">Camera</a></li>
@@ -20,90 +18,278 @@
       <li><a href="Accesscontrol.html">Access Control</a></li>
       <li><a href="Services.html">Services</a></li>
       <li><a href="System.html">System</a></li>
-
     </ul>
-</head>
-<body>
-  <div style="margin-left:15%; padding:20px 55px; height:100px;">
-    <h2>Access Control</h2>
-    <h4>General</h4>
+  </head>
+  <body>
+    <div style="margin-left: 15%; padding: 20px 55px; height: 100px">
+      <h2>Access Control</h2>
+      <h4>General</h4>
+      <label for="Security" id="SecureIOaddress">Identification Mode</label>
+      <select
+        style="float: left; width: 140px"
+        name="Security"
+        id="SecureIOaddress"
+      >
+        <option value="opt1">Local Identification</option>
+        <option value="opt2"></option>
+      </select>
 
+      <label for="regularconnection">Schedule Mode</label>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
 
+      <br /><br />
+      <label for="regularconnection">Unit Mode</label>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
 
-    <h4>Relay Timing</h4>
+      <label for="regularconnection" style="margin-left: 98px"
+        >Buzzer on Tamper</label
+      >
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
 
-    <label for="striketime">Strike Time</label>
-    <input type="text" id="relaytiming" name="striketime">&nbsp;
-    <label for="striketimeext">Strike Time extended</label>
-    <input type="text" id="relaytiming" name="striketimeext">&nbsp;<br><br>
+      <br /><br />
+      <label for="Security" style="float: left" id="SecureIObehavior"
+        >Unit Access Mode</label
+      >
+      <select
+        name="Security"
+        style="float: left; width: 140px"
+        id="SecureIObehavior"
+      >
+        <option value="opt1">Biometric only</option>
+        <option value="opt2">Wiegand Card only</option>
+        <option value="opt3">Smart Card only</option>
+      </select>
 
-    <label for="doorheld">Door Held Time</label>
-    <input type="text" id="relaytiming" name="doorheld">&nbsp;
-    <label for="doorheldext">Door Held Time extended</label>
-    <input type="text" id="relaytiming" name="doorheldext">&nbsp;<br><br>
+      <label for="Security" id="SecureIObehavior">Tamper Mode</label>
+      <select name="Security" id="SecureIObehavior">
+        <option value="opt1">Normal</option>
+        <option value="opt2">Wiegand Card only</option>
+        <option value="opt3">Smart Card only</option>
+      </select>
 
+      <br /><br />
 
+      <label for="Security" style="float: left" id="SecureIOaddress"
+        >Gender Restriction</label
+      >
+      <select
+        name="Security"
+        style="float: left; width: 140px"
+        id="SecureIOaddress"
+      >
+        <option value="opt1">No Restriction</option>
+        <option value="opt2">Men only</option>
+        <option value="opt3">Women only</option>
+      </select>
 
+      <label for="regularconnection">Minimum age</label>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+      <input
+        type="text"
+        id="relaytiming"
+        style="margin-left: 20px"
+        name="striketime"
+      />&nbsp;
 
+      <br /><br />
 
+      <h4>Relay Timing</h4>
 
-    <h4>Secure I/O</h4>
-    <label for="ipaddress">IP Address</label>
-    <input type="text" id="secureio" name="ipaddress"><br><br>
-    <label for="port">Port</label>
-    <input type="text" id="secureio" name="ipaddress"><br><br>
+      <label for="striketime">Strike Time</label>
+      <input type="text" id="relaytiming" name="striketime" />&nbsp;
+      <label for="striketimeext">Strike Time extended</label>
+      <input
+        type="text"
+        id="relaytiming"
+        name="striketimeext"
+      />&nbsp;<br /><br />
 
+      <label for="doorheld">Door Held Time</label>
+      <input type="text" id="relaytiming" name="doorheld" />&nbsp;
+      <label for="doorheldext">Door Held Time extended</label>
+      <input
+        type="text"
+        id="relaytiming"
+        name="doorheldext"
+      />&nbsp;<br /><br />
 
-    <label for="Security" id=SecureIOaddress>Connection Type</label>
-    <select name="Security" id="SecureIOaddress">
-      <option value="opt1">Network</option>
-      <option value="opt2">RS485</option>
-    </select> <br><br>
-    <label for="Security" id=SecureIObehavior>Behavior</label>
-    <select name="Security" id="SecureIObehavior">
-      <option value="opt1">Master</option>
-      <option value="opt2">Slave</option>
-    </select>
-    <br><br>
+      <h4>Secure I/O</h4>
+      <label for="ipaddress">IP Address</label>
+      <input type="text" id="secureio" name="ipaddress"style="width: 132px" /><br /><br />
+      <label for="port">Port</label>
+      <input type="text" id="secureio" name="ipaddress" style="width: 132px" /><br /><br />
 
+      <label for="Security" id="SecureIOaddress">Connection Type</label>
+      <select name="Security" id="SecureIOaddress">
+        <option value="opt1">Network</option>
+        <option value="opt2">RS485</option>
+      </select>
+      <br /><br />
+      <label for="Security" id="SecureIObehavior">Behavior</label>
+      <select name="Security" id="SecureIObehavior">
+        <option value="opt1">Master</option>
+        <option value="opt2">Slave</option>
+      </select>
+      <br /><br />
 
-    <h4>Inputs</h4>
-    
-    <label for="regularconnection">Exit Push Button</label>
-    <label class="switch">
-      <input type="checkbox">
-      <span class="slider round"></span>
-    </label> <br><br><br>
+      <h4>Inputs</h4>
 
-    <label for="sslconnection">Door Status</label>
-    <label class="switch">
-      <input type="checkbox">
-      <span class="slider round"></span>
-    </label><br><br><br>
+      <label for="regularconnection">Exit Push Button</label>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+      <br /><br /><br />
 
-    
-    <label for="regularconnection">Breaking Glass </label>
-    <label class="switch">
-      <input type="checkbox">
-      <span class="slider round"></span>
-    </label> <br><br><br>
+      <label for="sslconnection">Door Status</label>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span> </label
+      ><br /><br /><br />
 
-    <label for="sslconnection">Fire Alarm</label>
-    <label class="switch">
-      <input type="checkbox">
-      <span class="slider round"></span>
-    </label><br><br><br>
-    
-    <h4>RS232/RS485</h4>
-    <h4>Wiegand</h4>  
-    <h4>Wiegand Output</h4>
+      <label for="regularconnection">Breaking Glass </label>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+      <br /><br /><br />
 
+      <label for="sslconnection">Fire Alarm</label>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span> </label
+      ><br /><br /><br />
 
+      <h4>RS232/RS485</h4>
+      <label for="Security" id="SecureIOaddress">Baud Rate</label>
+      <select
+        style="float: left; width: 140px"
+        name="Security"
+        id="SecureIOaddress"
+      >
+        <option value="opt1">115200</option>
+        <option value="opt2"></option>
+      </select>
 
+      <label for="regularconnection">Enable ODSP</label>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
 
+      <br /><br />
+      <label for="Security" id="SecureIOaddress">Stop Bits</label>
+      <select
+        style="float: left; width: 140px"
+        name="Security"
+        id="SecureIOaddress"
+      >
+        <option value="opt1">1</option>
+        <option value="opt2">2</option>
+      </select>
+      <br /><br />
 
-  </div>
-       
-    
-</body>
-</html>  
+      <label for="Security" id="SecureIOaddress">Parity</label>
+      <select
+        style="float: left; width: 140px"
+        name="Security"
+        id="SecureIOaddress"
+      >
+        <option value="opt1">None</option>
+        <option value="opt2"></option>
+      </select>
+      <br /><br />
+      <label for="striketime">Address</label>
+      <input type="text" id="relaytiming" name="striketime" />&nbsp;
+
+      <br /><br />
+      <label for="striketimeext">Timeout</label>
+      <input type="text" id="relaytiming" name="striketimeext" />&nbsp;
+      <br /><br />
+
+      <h4>Wiegand</h4>
+
+      <label for="Security" id="SecureIOaddress">Input Format(RX)</label>
+      <select
+        style="float: left; width: 140px"
+        name="Security"
+        id="SecureIOaddress"
+      >
+        <option value="opt1">26 bits</option>
+        <option value="opt2"></option>
+      </select>
+
+      <label for="regularconnection">Wiegand Card output</label>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+
+      <br /><br />
+      <label for="Security" id="SecureIOaddress">Output Width (TX)</label>
+      <input type="text" style="width: 132px" id="secureio" name="ipaddress" />
+
+      <label for="Security" id="SecureIOaddress">Output Format</label>
+      <select
+        style="float: left; width: 140px"
+        name="Security"
+        id="SecureIOaddress"
+      >
+        <option value="opt1">26 bits</option>
+        <option value="opt2"></option>
+      </select>
+      <br /><br />
+
+      <label for="Security" id="SecureIOaddress">Output period(TX)</label>
+      <input type="text" style="width: 132px" id="secureio" name="ipaddress" />
+
+      <label for="Security" id="SecureIOaddress"
+        >Output Facility Code(RX)</label
+      >
+      <input
+        type="text"
+        style="width: 132px"
+        id="secureio"
+        name="ipaddress"
+      /><br /><br />
+
+      <h4>Wiegand Output Events</h4>
+
+      <label for="Security" id="SecureIOaddress" style = "font-size: medium;">User Fails to Identify</label>
+      <label for="Security" id="SecureIOaddress" style = "margin-left: 141px; font-size: medium;">No Biometrics Presented</label
+      ><br /><br /><br>
+
+      <label for="Port">Facility Code </label>
+      <input type="Port" id="Port" style="width: 132px"name="Port" />
+      <label for="disoveryPort">Facility Code</label>
+      <input type="disoveryPort" id="disoveryPort"style="width: 132px" name="disoveryPort" />
+
+      <br />
+      <br />
+
+      <label for="sslport">Card Number</label>
+      <input type="sslport" id="sslport" style="width: 132px"name="sslport" />
+      <label for="ssldiscoveryport">Card Number</label>
+      <input
+        type="ssldiscoveryport"
+        id="ssldiscoveryport"
+        name="ssldiscoveryport"
+        style="width: 132px"
+      />
+      <br><br>
+      <h4></h4>
+    </div>
+  </body>
+</html>

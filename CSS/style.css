@@ -45,7 +45,7 @@ ul {
   }
   h4{
     border-bottom: 2px solid rgb(199, 198, 198);
-    width: 55%;
+    width: 70%;
     font-family: Verdana, sans-serif;
     font-size: 14px;
     
@@ -173,9 +173,9 @@ select#SecureIObehavior,select#SecureIOaddress
   .switch {
     position: relative;
     display: inline-block;
-    width: 15px;
-    height: 27px;
-    size: 30px;
+    width: 12px;
+    height: 22px;
+    size: 20px;
   }
   
   /* Hide default HTML checkbox */
@@ -196,14 +196,15 @@ select#SecureIObehavior,select#SecureIOaddress
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
+    
 
   }
   
   .slider:before {
     position: absolute;
     content: "";
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     left: 4px;
     bottom: 4px;
     background-color: white;
