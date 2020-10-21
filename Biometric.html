@@ -41,11 +41,11 @@
     <div id='timeout'>
       <label for="timeout" id="timeoutlbl" style = "margin-left: 40px;">Timeout</label>
       <div class="slidecontainer">
-        <input id="timeout" type="range" min="0" max="100" value="50">
+        <input id ="myRange"  type="range" min="0" max="100" value="50" style="margin-left: -50px;">
         <span id="demo"></span>
       </div>
 
-      <br> <br> <br>
+      <br> <br> 
     </div>
 
     <label for="Quality" id=Quality>Quality</label>
@@ -148,14 +148,30 @@
     <div id='timeoutpalm'>
       <label for="timeout" id="timeoutpalmlbl">Timeout</label>
       <div class="slidecontainer">
-        <input id="timeoutpalm" type="range" min="0" max="100" value="50"  style="margin-left: -60px;">
-        <span id="demo"></span>
+        <input id ="myRange1"  type="range" min="0" max="100" value="50" style="margin-left: -60px;">
+        <span id="demo1"></span>
       </div>
 
       <br><br>
       <h4></h4>
   </div>
+  <script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+    
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
 
+    var slider = document.getElementById("myRange1");
+    var output = document.getElementById("demo1");
+    output.innerHTML = slider.value;
+    
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+    </script>
 
 </body>
 

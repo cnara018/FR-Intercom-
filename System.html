@@ -118,7 +118,7 @@
 
     <label for="timeout" id="timeoutlbl">Volume</label>
     <div class="slidecontainer">
-      <input id="timeout" type="range" style="margin-left: 45px;" min="0" max="100" value="50">
+      <input id="myRange" type="range" style="margin-left: 45px;" min="0" max="100" value="50">
       <span id="demo"></span>
     </div>
 
@@ -160,6 +160,17 @@
 
 
   </div>
+
+  
+<script>
+  var slider = document.getElementById("myRange");
+  var output = document.getElementById("demo");
+  output.innerHTML = slider.value;
+  
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+  }
+  </script>
 
 </body>
 
