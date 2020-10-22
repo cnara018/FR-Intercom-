@@ -4,8 +4,10 @@ html {
   
 }
 
+
+
 #nav{
-    background-color: #05050c;
+    background-color: #1E2126;
     color: rgb(255, 255, 255);
     margin-left: 15%;
     font-family: Verdana, sans-serif;
@@ -18,7 +20,7 @@ ul {
     margin: 0;
     padding: 0;
     width: 12%;
-    background-color: #05050c;
+    background-color:#1E2126;
     position: fixed;
     height: 100%;
     overflow: auto;
@@ -213,11 +215,11 @@ select#SecureIObehavior,select#SecureIOaddress
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #EA4333;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #EA4333;
   }
   
   input:checked + .slider:before {

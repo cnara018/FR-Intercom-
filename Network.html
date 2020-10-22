@@ -1,91 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    
-    
-    <title>Device Settings - Network</title>
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
 
-    <ul>
-        <h2 id = nav >Device Settings</h2>
-      <li><a href="Network.html">Network</a></li>
-      <li><a href="SIP.html">SIP</a></li>
-      <li><a href="Camera.html">Camera</a></li>
-      <li><a href="Biometric.html">Biometric</a></li>
-      <li><a href="Accesscontrol.html">Access Control</a></li>
-      <li><a href="Services.html">Services</a></li>
-      <li><a href="System.html">System</a></li>
 
-    </ul>
+  <title>Device Settings - Network</title>
+
+  <ul>
+    <br>
+    <img src="IdentyTech logo - white.png" alt="Flowers" style="width:200px; padding-left: 12px;">
+    <br><br><br>
+    <li><a href="Network.html">Network</a></li>
+    <li><a href="SIP.html">SIP</a></li>
+    <li><a href="Camera.html">Camera</a></li>
+    <li><a href="Biometric.html">Biometric</a></li>
+    <li><a href="Accesscontrol.html">Access Control</a></li>
+    <li><a href="Services.html">Services</a></li>
+    <li><a href="System.html">System</a></li>
+
+  </ul>
 </head>
+
 <body>
-    
+
   <div style="margin-left:15%; padding:20px 55px; height:100px;">
     <h2>Network</h2>
     <h4>General</h4>
     <label for="macAddname">MAC Address</label>
-    <input type="text" id="macaddress" value="1C:FE:A7:FE:FE:FE" readonly style = "margin-left: -80px;"><br><br>
+    <input type="text" id="macaddress" value="1C:FE:A7:FE:FE:FE" readonly style="margin-left: -80px;"><br><br>
     <label for="devName">Device Name</label>
-    <input type="text" id="devName" name="devName"style = "margin-left: -80px;"><br><br>
+    <input type="text" id="devName" name="devName" style="margin-left: -80px;"><br><br>
 
     <h4> Connection Type</h4>
-    
+
     <label for="regularconnection">Regular</label>
-    <label id="regswitch" class="switch" style = "margin-left: -80px;">
-      <input type="checkbox">
+    <label id="regswitch" class="switch" style="margin-left: -80px;">
+      <input id="regSwitch" type="checkbox" onclick="ch($(this));">
       <span class="slider round"></span>
     </label> <br><br><br>
 
     <label for="sslconnection">SSL</label>
-    <label id="sslswitch" class="switch" style = "margin-left: -80px;">
-      <input type="checkbox">
+    <label id="sslswitch" class="switch" style="margin-left: -80px;">
+      <input id="sslSwitch" type="checkbox" onclick="ch1($(this));">
       <span class="slider round"></span>
     </label><br>
 
-    
+
 
     <h4>IP Settings</h4>
 
 
     <label for="ipaddress">IP Address</label>
-    <input type="text" id="ipaddress" name="ipaddress" style = "margin-left: -80px;"><br><br>
+    <input type="text" id="ipaddress" name="ipaddress" style="margin-left: -80px;"><br><br>
     <label for="subnetmask">Subnet Mask</label>
-    <input type="text" id="subnetmask" name="subnetmask" style = "margin-left: -80px;"><br><br>
+    <input type="text" id="subnetmask" name="subnetmask" style="margin-left: -80px;"><br><br>
     <label for="gateway">Gateway</label>
-    <input type="text" id="gateway" name="gateway"style = "margin-left: -80px;"><br><br>
+    <input type="text" id="gateway" name="gateway" style="margin-left: -80px;"><br><br>
     <label for="primaryDNS">Primary DNS</label>
-    <input type="text" id="primaryDNS" name="primaryDNS" style = "margin-left: -80px;"><br><br>
+    <input type="text" id="primaryDNS" name="primaryDNS" style="margin-left: -80px;"><br><br>
     <label for="secondaryDNS">Secondary DNS</label>
-    <input type="text" id="secondaryDNS" name="secondaryDNS "style = "margin-left: -80px;"><br><br>
-    
-    
-    <h4>Port Settings</h4>
-    
-    
+    <input type="text" id="secondaryDNS" name="secondaryDNS " style="margin-left: -80px;"><br><br>
+
+
+    <h4>Communication Ports</h4>
+
+
     <br>
-      <label for="Port">Port </label>
-      <input type="Port" id="Port" name="Port" style = "margin-left: -80px;">
-      <label for="disoveryPort"style = "margin-left: 80px;">Discovery Port</label>
-      <input type="disoveryPort" id="disoveryPort" name="disoveryPort" style = "margin-left: -70px;">
-      
-<br>
-<br>
-       
-          <label for="sslport">SSL Port</label>
-          <input type="sslport" id="sslport"  name="sslport" style = "margin-left: -80px;">
-          <label for="ssldiscoveryport"style = "margin-left: 80px;">SSL Discovery Port</label>
-          <input type="ssldiscoveryport" id="ssldiscoveryport"  name="ssldiscoveryport"style = "margin-left: -70px;">
-          
-          <br><br>
-          <h4></h4>
-    
+    <label for="Port">Port </label>
+    <input type="Port" id="Port" name="Port" style="margin-left: -80px;">
+    <label for="disoveryPort" style="margin-left: 80px;">Discovery Port</label>
+    <input type="disoveryPort" id="disoveryPort" name="disoveryPort" style="margin-left: -70px;" value="5001" readonly
+      style="margin-left: -80px;">
+
+    <br>
+    <br>
+
+    <label for="sslport">SSL Port</label>
+    <input type="sslport" id="sslport" name="sslport" style="margin-left: -80px;">
+    <label for="ssldiscoveryport" style="margin-left: 80px;">SSL Discovery Port</label>
+    <input type="ssldiscoveryport" id="ssldiscoveryport" name="ssldiscoveryport" style="margin-left: -70px;"
+      value="5051" readonly style="margin-left: -80px;">
+
+    <br><br>
+    <h4></h4>
+
   </div>
+  <script>
+    function ch(thi) {
+
     
+
+      if ($('#regSwitch').prop('checked', true))
+      {
+        $('#sslSwitch').prop('checked', false);
+        
+      }
     
+
+    
+      
+    }
+
+    
+    function ch1(thi)
+      {
+        
+      if ($('#sslSwitch').prop('checked', true))
+      {
+        $('#regSwitch').prop('checked', false);
+        console.log(($('#regSwitch')));
+        
+      }
+      
+      }
+  </script>
 </body>
-</html>  
+
+</html>

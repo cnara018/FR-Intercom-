@@ -11,8 +11,11 @@
 
   <title>Device Settings - Biometric</title>
 
+
   <ul>
-    <h2 id=nav>Device Settings</h2>
+    <br>
+    <img src="IdentyTech logo - white.png" alt="Flowers" style="width:200px; padding-left: 12px;">
+    <br><br><br>
     <li><a href="Network.html">Network</a></li>
     <li><a href="SIP.html">SIP</a></li>
     <li><a href="Camera.html">Camera</a></li>
@@ -41,7 +44,7 @@
     <div id='timeout'>
       <label for="timeout" id="timeoutlbl" style = "margin-left: 40px;">Timeout</label>
       <div class="slidecontainer">
-        <input id ="myRange"  type="range" min="0" max="100" value="50" style="margin-left: -50px;">
+        <input id ="myRange"  type="range" min="0" max="10" value="5" style="margin-left: -50px;"> 	&nbsp;
         <span id="demo"></span>
       </div>
 
@@ -148,7 +151,7 @@
     <div id='timeoutpalm'>
       <label for="timeout" id="timeoutpalmlbl">Timeout</label>
       <div class="slidecontainer">
-        <input id ="myRange1"  type="range" min="0" max="100" value="50" style="margin-left: -60px;">
+        <input id ="myRange1"  type="range" min="0" max="10" value="5" style="margin-left: -60px;"> 	&nbsp;
         <span id="demo1"></span>
       </div>
 
@@ -164,12 +167,12 @@
       output.innerHTML = this.value;
     }
 
-    var slider = document.getElementById("myRange1");
-    var output = document.getElementById("demo1");
-    output.innerHTML = slider.value;
+    var slider2 = document.getElementById("myRange1");
+    var output2 = document.getElementById("demo1");
+    output2.innerHTML = slider.value;
     
-    slider.oninput = function() {
-      output.innerHTML = this.value;
+    slider2.oninput = function() {
+      output2.innerHTML = this.value;
     }
     </script>
 
