@@ -29,35 +29,75 @@
 
   <div style="margin-left:15%; padding:20px 55px; height:100px;">
     <h2>System</h2>
-    <h4>Date/Time</h4>
+    <h4>General</h4>
 
-    <label for="Manual">Manual</label>
-    <label class="switch">
-      <input type="checkbox" />
-      <span class="slider round"></span>
-    </label>
 
-    <label for="Security" id="SecureIOaddress" style="font-size: medium;margin-left: 250px;">Use NTP</label>
+    <label for="Security" id="SecureIObehavior">Language settings</label>
+    <select name="Security" id="SecureIObehavior">
+      <option value="opt1">English</option>
+      <option value="opt2">Russian</option>
+      <option value="opt3">French</option>
+      <option value="opt4">German</option>
+      <option value="opt5">Hebrew</option>
+      <option value="opt5">Turkish</option>
+      <option value="opt5">Italian</option>
+
+    </select>
+
+    <br><br>
+    <label for="Manual">Enrollment Sound Notifications</label>
+    <select name="Security" id="SecureIObehavior">
+      <option value="opt1">Off</option>
+      <option value="opt2">On</option>
+    
+    </select>
+    <br><br>
+
+    <label for="Manual">Pass/Fail Sound</label>
+    <select name="Security" id="SecureIObehavior">
+      <option value="opt1">Off</option>
+      <option value="opt2">On</option>
+    
+    </select>
+    <br><br><br><br>
+
+    <label for="Manual">Database saving option</label>
+    <select name="Security" id="SecureIObehavior">
+      <option value="opt1">Terminal</option>
+      <option value="opt2">SD card</option>
+    
+    </select> 
+    <br><br>
+    <button id= "users" style="width: 90px;height:25px;background-color: #2196F3;color: rgb(255, 255, 255);float: left; margin-left: 230px;">Change</button>
+
+
 
     <br><br>
 
-
+<h4>Time/Date</h4>
     <form action="/action_page.php">
       <label for="Date">Date</label>
       <input type="date" id="Date" name="Date">
     </form>
-
-    <label for="NTPipaddress" style="margin-left:30px">NTP Server </label>
-    <input type="text" id="secureio" name="ipaddress" style="width: 132px;">
-    <br><br>
-
+<br><br>
 
     <form action="/action_page.php">
       <label for="time">Time</label>
       <input type="time" style="width: 158px;" id="time" name="time">
     </form>
+<br><br><BR>
+<input type="checkbox" id="failurenotifcations" style="width:20px; height:20px; margin-left: 28px;" name="FRcb"
+value="FR">
+<label for="Security" style="float: left; size: 20px; margin-left: -15px;margin-top: 5px;"
+id="SecureIOaddress">Enable NTP?</label>
 
-    <label for="Security" id=Security style="margin-left:30px">Continent</label>
+<br /><br /><br>
+
+<label for="NTPipaddress" >NTP Path </label>
+<input type="text" id="secureio" name="ipaddress" style="width: 132px;">
+<br><br>
+
+    <label for="Security" id=Security >NTP Continent</label>
     <select name="Security" id="Security">
       <option value="opt1">GMT-5 Eastern(New York)</option>
       <option value="opt2">Enhanced</option>
@@ -66,12 +106,14 @@
     <br><br>
 
     
+    <label for="Security" id=Security >NTP Continent</label>
+    <select name="Security" id="Security">
+      <option value="opt1">GMT-5 Eastern(New York)</option>
+      <option value="opt2">Enhanced</option>
+      <option value="opt3">Maximum</option>
+    </select>
+    <br><br>
 
-    <label for="Manual" style="margin-left: 151px;">Location</label>
-    <label class="switch">
-      <input type="checkbox" />
-      <span class="slider round"></span>
-    </label>
 
     <br><br>
 
@@ -79,23 +121,11 @@
 
 
 
-    <h4>Language</h4>
-
-    <label for="Security" id="SecureIObehavior">Select Language</label>
-    <select name="Security" id="SecureIObehavior">
-      <option value="opt1">English</option>
-      <option value="opt2">Spanish</option>
-      <option value="opt3">French</option>
-      <option value="opt4">German</option>
-      <option value="opt5">Japanese</option>
-
-    </select>
-
 
     <h4>Maintenance</h4>
 
     <br>
-    <button id= "users" style="width: 90px;height:35px;background-color: #2196F3;color: rgb(255, 255, 255);float: left; margin-left: 130px;">Reboot</button>
+    <button id= "users" style="width: 90px;height:35px;background-color: #2196F3;color: rgb(255, 255, 255);float: left; margin-left: 230px;">Reboot</button>
     <button id= "users" style="width: 90px;height:35px;background-color: #2196F3;color: rgb(255, 255, 255); margin-left: 20px;">Factory Reset</button> 
     <br><br><br>
 
