@@ -33,12 +33,18 @@
     <h4>Monitoring </h4>
     <label for="macAddname">IP Address</label>
     <input type="text" id="serviceaddress" name="serviceaddress" style = "margin-left: -80px;"><br><br>
-    <label for="devName">Port</label>
-    <input type="text" id="monitoringport" name="monitoringport" style = "margin-left: -80px;"><br><br><br><br>
-    <button id = "clear" >Clear Cache</button>
+    <label for="devName">Port</label>    
+    <input type="text" id="monitoringport" name="monitoringport" style = "margin-left: -80px;"><br><br><br>
+  
+
+    <input type="checkbox" id="failurenotifcations" style="width:20px; height:20px; margin-left: 149px;" name="FRcb" value="FR">
+    <label for="Security" style="float: left; size: 20px; margin-left: -15px; " id="SecureIOaddress">Repeated failure attempts notification</label>
+    <br><br><br>
+    <label for="attemptslabel" style = "margin-left: 155px;">Number of attempts:</label>
+    <input type="text" id="attempts" name="attempts" style = "margin-left: -60px; width: 40px ;"><br><br>
     <br><br>
     
-    <h4>Log Settings</h4>
+    <h4>Monitoring Message Filter</h4>
 
     <label for="regularconnection">Access Granted</label>
     <label class="switch"style = "margin-left: -80px;">

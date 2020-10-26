@@ -54,6 +54,9 @@ ul {
 
   
   }
+  h3{
+    font-size: medium;
+  }
   #mydevices>p{
     position: relative;
     border-bottom: 2px solid rgb(199, 198, 198);
@@ -221,7 +224,7 @@ select#SecureIObehavior,select#SecureIOaddress
   input:focus + .slider {
     box-shadow: 0 0 1px #EA4333;
   }
-  
+ 
   input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);

@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
   <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <title>Device Settings - Access Control</title>
 
@@ -44,13 +45,13 @@
     </label>
 
     <br /><br />
-    <label for="regularconnection">Unit Mode</label>
-    <label class="switch">
-      <input type="checkbox" />
-      <span class="slider round"></span>
-    </label>
+    <label for="regularconnection">Access Mode</label>
+    <select name="Security" style="float: left; width: 140px" id="SecureIObehavior">
+      <option value="opt1">User mode</option>
+      <option value="opt2">Unit mode</option>
+    </select>
 
-    <label for="regularconnection" style="margin-left: 178px;">Buzzer on Tamper</label>
+    <label for="regularconnection" style="margin-left: 80px;">Buzzer on Tamper</label>
     <label class="switch">
       <input type="checkbox" />
       <span class="slider round"></span>
@@ -81,11 +82,17 @@
     </select>
 
     <label for="regularconnection" style="margin-left: 80px;">Minimum age</label>
-    <label class="switch">
-      <input type="checkbox" />
-      <span class="slider round"></span>
-    </label>
-    <input type="text" id="relaytiming" style="margin-left: 20px" name="striketime" />&nbsp;
+
+    <input type="text" id="relaytiming" name="striketime" />&nbsp;
+
+    <br /><br />
+
+    <label for="Security" style="float: left; size: 20px; " id="SecureIOaddress">Use FR</label>
+    <input type="checkbox" id="FR" style="width:20px; height:20px;" name="FRcb" value="FR">
+
+    <label for="Security" style="float: left; margin-left: 192px;" id="SecureIOaddress">Disable Unit for FR</label>
+    <input type="checkbox" id="FR" style="width:20px;height:20px;" name="FRcb" value="FR">
+
 
     <br /><br />
 
@@ -93,12 +100,12 @@
 
     <label for="striketime">Strike Time</label>
     <input type="text" id="relaytiming" name="striketime" />&nbsp;
-    <label for="striketimeext">Strike Time extended</label>
+    <label for="striketimeext" style=" margin-left: 192px;">Strike Time extended</label>
     <input type="text" id="relaytiming" name="striketimeext" />&nbsp;<br /><br />
 
     <label for="doorheld">Door Held Time</label>
     <input type="text" id="relaytiming" name="doorheld" />&nbsp;
-    <label for="doorheldext">Door Held Time extended</label>
+    <label for="doorheldext" style=" margin-left: 192px;">Door Held Time extended</label>
     <input type="text" id="relaytiming" name="doorheldext" />&nbsp;<br /><br />
 
     <h4>Secure I/O</h4>
@@ -127,14 +134,33 @@
       <input type="checkbox" />
       <span class="slider round"></span>
     </label>
+
+    <label for="regularconnection" style="margin-left: 50px;">Normally closed</label>
+    <label class="switch">
+      <input type="checkbox" />
+      <span class="slider round"></span>
+    </label>
     <br /><br /><br />
 
     <label for="sslconnection">Door Status</label>
     <label class="switch">
       <input type="checkbox" />
-      <span class="slider round"></span> </label><br /><br /><br />
+      <span class="slider round"></span> </label>
+      
+    <label for="regularconnection" style="margin-left: 50px;">Normally opened</label>
+    <label class="switch">
+      <input type="checkbox" />
+      <span class="slider round"></span>
+    </label>
+      <br /><br /><br />
 
     <label for="regularconnection">Breaking Glass </label>
+    <label class="switch">
+      <input type="checkbox" />
+      <span class="slider round"></span>
+    </label>
+
+    <label for="regularconnection" style="margin-left: 50px;">Normally opened</label>
     <label class="switch">
       <input type="checkbox" />
       <span class="slider round"></span>
@@ -144,7 +170,13 @@
     <label for="sslconnection">Fire Alarm</label>
     <label class="switch">
       <input type="checkbox" />
-      <span class="slider round"></span> </label><br /><br /><br />
+      <span class="slider round"></span> </label>
+      <label for="regularconnection" style="margin-left: 50px;">Normally opened</label>
+      <label class="switch">
+      <input type="checkbox" />
+      <span class="slider round"></span>
+    </label>
+      <br /><br /><br />
 
     <h4>RS232/RS485</h4>
     <label for="Security" id="SecureIOaddress">Baud Rate</label>
@@ -185,56 +217,239 @@
 
     <h4>Wiegand</h4>
 
+    <h3>General</h3>
+
+    <label for="Security" id="SecureIOaddress">Output (TX) width</label>
+    <input type="text" style="width: 132px" id="secureio" name="ipaddress" />
+    <br /><br />
+    <label for="Security" id="SecureIOaddress">Output (TX) period</label>
+    <input type="text" style="width: 132px" id="secureio" name="ipaddress" />
+    <br><br>
+    <h3>Input</h3>
+
     <label for="Security" id="SecureIOaddress">Input Format(RX)</label>
     <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
       <option value="opt1">26 bits</option>
       <option value="opt2"></option>
     </select>
+    <br><br>
+    <input type="checkbox" id="failurenotifcations" style="width:20px; height:20px; margin-left: 28px;" name="FRcb"
+      value="FR">
+    <label for="Security" style="float: left; size: 20px; margin-left: -15px;margin-top: 5px;"
+      id="SecureIOaddress">Suspend serial port based IClass</label>
+
+    <br /><br />
+    <h3>Output</h3>
+
 
     <label for="regularconnection">Wiegand Card output</label>
     <label class="switch">
       <input type="checkbox" />
       <span class="slider round"></span>
     </label>
+    <br><br>
 
-    <br /><br />
-    <label for="Security" id="SecureIOaddress">Output Width (TX)</label>
-    <input type="text" style="width: 132px" id="secureio" name="ipaddress" />
+    <label for="regularconnection">User ID output</label>
+    <label class="switch">
+      <input type="checkbox" />
+      <span class="slider round"></span>
+    </label>
+    <br><br>
 
-    <label for="Security" id="SecureIOaddress">Output Format</label>
-    <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
+
+    <label for="Security" id="SecureIOaddress" style="margin-left: 30px;">Output Format</label>
+    <select style="float: left; width: 140px; margin-left: -30px;" name="Security" id="SecureIOaddress">
       <option value="opt1">26 bits</option>
       <option value="opt2"></option>
     </select>
-    <br /><br />
+    <br><br>
 
-    <label for="Security" id="SecureIOaddress">Output period(TX)</label>
-    <input type="text" style="width: 132px" id="secureio" name="ipaddress" />
+    <label for="Security" id="SecureIOaddress" style="margin-left: 30px;">Output Facility Code</label>
+    <input type="text" style="width: 132px;margin-left: -30px;" id="secureio" name="ipaddress" /><br /><br />
 
-    <label for="Security" id="SecureIOaddress">Output Facility Code(RX)</label>
-    <input type="text" style="width: 132px" id="secureio" name="ipaddress" /><br /><br />
+    <h3>When user fails to identify output:</h3>
 
-    <h4>Wiegand Output Events</h4>
-
-    <label for="Security" id="SecureIOaddress" style="font-size: medium;">User Fails to Identify</label>
-    <label for="Security" id="SecureIOaddress" style="margin-left: 141px; font-size: medium;">No Biometrics
-      Presented</label><br /><br /><br>
 
     <label for="Port">Facility Code </label>
-    <input type="Port" id="Port" style="width: 132px" name="Port" />
-    <label for="disoveryPort">Facility Code</label>
-    <input type="disoveryPort" id="disoveryPort" style="width: 132px" name="disoveryPort" />
+    <input type="Port" id="Port" style="width: 132px; margin-left: -80px;" name="Port" />
 
-    <br />
-    <br />
+    <label for="sslport" style="margin-left: 40px;">Card Number</label>
+    <input type="sslport" id="sslport" style="width: 132px; margin-left: -80px;" name="sslport" />
+    <br><br>
 
-    <label for="sslport">Card Number</label>
-    <input type="sslport" id="sslport" style="width: 132px" name="sslport" />
-    <label for="ssldiscoveryport">Card Number</label>
-    <input type="ssldiscoveryport" id="ssldiscoveryport" name="ssldiscoveryport" style="width: 132px" />
+    <h3>When no biomteric presented:</h3>
+
+
+    <label for="Port">Facility Code </label>
+    <input type="Port" id="Port" style="width: 132px;margin-left: -80px;" name="Port" />
+
+    <label for="sslport" style="margin-left: 40px;">Card Number</label>
+    <input type="sslport" id="sslport" style="width: 132px; margin-left: -80px;" name="sslport" />
+    <br><br>
+
+    <h4>Elevator Settings</h4>
+
+
+    <label for="regularconnection">RS 232</label>
+    <label id="regswitch" class="switch" style="margin-left: -80px;">
+      <input id="rs232" type="checkbox" onclick="ch($(this));">
+      <span class="slider round"></span>
+    </label>
+
+    <label for="sslconnection">RS 485</label>
+    <label id="sslswitch" class="switch" style="margin-left: -80px;">
+      <input id="rs485" type="checkbox" onclick="ch1($(this));">
+      <span class="slider round"></span>
+    </label>
+    <br><br>
+
+    <div id="RSBOX" style=" border-style: groove; width:500px; margin-left: 30px;">
+      <br>
+      <label for="Security" id="SecureIOaddress">Baud Rate</label>
+      <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
+        <option value="opt1">115200</option>
+        <option value="opt2"></option>
+      </select>
+
+
+      <br /><br />
+      <label for="Security" id="SecureIOaddress">Stop Bits</label>
+      <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
+        <option value="opt1">1</option>
+        <option value="opt2">2</option>
+      </select>
+      <br /><br />
+
+      <label for="Security" id="SecureIOaddress">Parity</label>
+      <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
+        <option value="opt1">None</option>
+        <option value="opt2"></option>
+      </select>
+      <br /><br />
+      <label for="striketime">Address</label>
+      <input type="number" class="size-36" value="0" min="0" max="10" step="1">
+
+      <br><br>
+
+
+    </div>
+
+
+    <br><br><br>
+    
+    <label for="regularconnection">USB</label>
+    <label id="usbswitch" class="switch" style="margin-left: -80px;">
+      <input id="usb" type="checkbox" onclick="ch2($(this));">
+      <span class="slider round"></span>
+    </label>
+
+    <br><br>
+    <div id="usb" style="border-style: groove; width:500px; margin-left: 30px;">
+      <br>
+      <label for="striketime">USB Port#:</label>
+      <input type="number" class="size-36" value="0" min="0" max="10" step="1">
+
+      <br><br>
+    </div>
+
+    <br><br><br>
+
+    <label for="regularconnection">Network</label>
+    <label id="usbswitch" class="switch" style="margin-left: -80px;">
+      <input id="network" type="checkbox" onclick="ch3($(this));">
+      <span class="slider round"></span>
+    </label>
+
+    <br><br>
+    <div id="network"  style="border-style: groove; width:500px; margin-left: 30px;">
+      <br>
+      <label for="ipaddress">IP Address</label>
+      <input type="text" id="ipaddress" name="ipaddress" style="margin-left: -80px;"><br><br>
+      <label for="Port">Port </label>
+      <input type="Port" id="Port" name="Port" style="margin-left: -80px;">
+
+      <br><br>
+    </div>
+
+
+    <br><br>
+    <h4>Anti-passback settings</h4>
+
+    <label for="regularconnection">Local Anti-passback</label>
+    <label class="switch">
+      <input type="checkbox" />
+      <span class="slider round"></span>
+    </label>
+    <br><br>
+
+    <label for="regularconnection">Timed Anti-passback</label>
+    <label class="switch">
+      <input type="checkbox" />
+      <span class="slider round"></span>
+    </label>
+    <br><br>
+    <label for="regularconnection">Time (min)</label>
+    <input type="number" class="size-36" value="0" min="0" max="10" step="1">
+    <br><br>
+    <input type="checkbox" id="failurenotifcations" style="width:20px; height:20px; margin-left: 230px;" name="FRcb"
+      value="FR">
+    <label for="Security" style="float: left; size: 20px; margin-left: -15px;margin-top: 5px; "
+      id="SecureIOaddress">Soft Anti-passback</label>
     <br><br>
     <h4></h4>
   </div>
+
+
+  <script>
+    function ch(thi) {
+
+
+
+      if ($('#rs232').prop('checked', true)) {
+        $('#rs485').prop('checked', false);
+        $('#usb').prop('checked', false);
+        $('#network').prop('checked', false);
+
+      }
+
+
+    }
+
+
+    function ch1(thi) {
+
+      if ($('#rs485').prop('checked', true)) {
+        $('#rs232').prop('checked', false);
+        $('#usb').prop('checked', false);
+        $('#network').prop('checked', false);
+
+      }
+
+    }
+
+
+    function ch2(thi) {
+
+      if ($('#usb').prop('checked', true)) {
+        $('#rs232').prop('checked', false);
+        $('#rs485').prop('checked', false);
+        $('#network').prop('checked', false);
+
+      }
+
+    }
+
+    function ch3(thi) {
+
+      if ($('#network').prop('checked', true)) {
+        $('#rs232').prop('checked', false);
+        $('#rs485').prop('checked', false);
+        $('#usb').prop('checked', false);
+      }
+
+    }
+
+  </script>
 </body>
 
 </html>

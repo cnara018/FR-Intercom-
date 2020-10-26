@@ -37,7 +37,7 @@
       <span class="slider round"></span>
     </label>
 
-    <label for="Security" id="SecureIOaddress" style="font-size: medium;margin-left: 250px;">NTP Settings</label>
+    <label for="Security" id="SecureIOaddress" style="font-size: medium;margin-left: 250px;">Use NTP</label>
 
     <br><br>
 
@@ -47,7 +47,7 @@
       <input type="date" id="Date" name="Date">
     </form>
 
-    <label for="NTPipaddress" style="margin-left:30px">NTP Server IP</label>
+    <label for="NTPipaddress" style="margin-left:30px">NTP Server </label>
     <input type="text" id="secureio" name="ipaddress" style="width: 132px;">
     <br><br>
 
@@ -57,7 +57,7 @@
       <input type="time" style="width: 158px;" id="time" name="time">
     </form>
 
-    <label for="Security" id=Security style="margin-left:30px">Time Zone</label>
+    <label for="Security" id=Security style="margin-left:30px">Continent</label>
     <select name="Security" id="Security">
       <option value="opt1">GMT-5 Eastern(New York)</option>
       <option value="opt2">Enhanced</option>
@@ -65,13 +65,9 @@
     </select>
     <br><br>
 
-    <label for="Manual">24 hour clock</label>
-    <label class="switch">
-      <input type="checkbox" />
-      <span class="slider round"></span>
-    </label>
+    
 
-    <label for="Manual" style="margin-left: 151px;">Use Daylight Savings</label>
+    <label for="Manual" style="margin-left: 151px;">Location</label>
     <label class="switch">
       <input type="checkbox" />
       <span class="slider round"></span>
@@ -95,67 +91,15 @@
 
     </select>
 
-    <h4>Sounds</h4>
-
-    <form action="/action_page.php">
-      <label for="myfile">Access Granted</label>
-      <input type="file" id="myfile" name="myfile">
-    </form> <br> <br>
-
-    <form action="/action_page.php">
-      <label for="myfile">Access Denied</label>
-      <input type="file" id="myfile" name="myfile">
-    </form> <br> <br>
-
-    <form action="/action_page.php">
-      <label for="myfile">Alert</label>
-      <input type="file" id="myfile" name="myfile">
-    </form> <br> <br>
-
-    <form action="/action_page.php">
-      <label for="myfile">Incoming Call</label>
-      <input type="file" id="myfile" name="myfile">
-    </form> <br> <br>
-
-    <label for="timeout" id="timeoutlbl">Volume</label>
-    <div class="slidecontainer">
-      <input id="myRange" type="range" style="margin-left: 45px;" min="0" max="100" value="50">
-      <span id="demo"></span>
-    </div>
-
-    <br><br>
-
-    <h4>Users</h4>
-
-
-    <select name="Users" size="10" style="width:175px;margin-left: 130px">
-      <option value="Admin"> Admin </option>
-      <option value="Steve"> Steve </option>
-      <option value="John">John </option>
-      <option value="Ross"> Ross </option>
-      <option value="Billy"> Billy </option>
-      <option value="Bob"> Bob </option>
-    </select>
-    <br><br>
-    <button id= "users" style="width: 55px;height:35px;background-color: #2196F3;color: rgb(255, 255, 255);margin-left: 130px">Add</button>
-    <button id= "users" style="width: 55px;height:35px;background-color: #2196F3;color: rgb(255, 255, 255);">Edit</button> 
-    <button id= "users" style="width: 55px;height:35px;background-color: #2196F3;color: rgb(255, 255, 255);">Delete</button>
-    <br><br>
 
     <h4>Maintenance</h4>
 
+    <br>
     <button id= "users" style="width: 90px;height:35px;background-color: #2196F3;color: rgb(255, 255, 255);float: left; margin-left: 130px;">Reboot</button>
     <button id= "users" style="width: 90px;height:35px;background-color: #2196F3;color: rgb(255, 255, 255); margin-left: 20px;">Factory Reset</button> 
     <br><br><br>
 
-    <label for="Firmwareversion" style="float: left;">Firmware Version</label>
-    <input type="text" id="firmware" value="FW 15.05.200" readonly>
-    <br><br>
-
-    <form action="/action_page.php">
-      <label for="myfile">Firmware Update</label>
-      <input type="file" id="myfile" name="myfile">
-    </form> <br> <br>
+    
     <h4></h4>
 
 
