@@ -29,7 +29,7 @@
     <div style="margin-left:15%; padding:20px 55px; height:100px;">
         <h2>Camera</h2>
         <h4>Live View</h4>
-    <video width="700" controls>
+    <video id="stream" width="700" controls>
   <source src="mov_bbb.mp4" type="video/mp4">
   Your browser does not support HTML video.
 </video><br>
@@ -58,12 +58,15 @@
   <br>
   <div id = orientation>
   <h4>Image Orientation</h4>  
-  <label for="rotation">Rotation</label> <button type="button" style = "margin-left: -80px;">0&deg;</button><button type="button" >90&deg;</button><button type="button" >180&deg;</button><button type="button" >270&deg;</button>
+  <label for="rotation">Rotation</label> 
+  <button type="button" id = "90shift"style = "margin-left: -80px;">90&deg;</button>
+  <button type="button" id = "180shift">180&deg;</button>
+  <button type="button" id = "270shift">270&deg;</button>
     <br><br>
     
     <label for="mirror">Mirror</label>
     <label class="switch"style = "margin-left: -80px;">
-      <input type="checkbox">
+      <input type="checkbox" id="mirror">
       <span class="slider round"></span>
     </label> <br><br>
 </div>  

@@ -31,63 +31,63 @@
   <div style="margin-left:15%; padding:20px 55px; height:100px;">
     <h2>Services</h2>
     <h4>Monitoring </h4>
-    <label for="macAddname">IP Address</label>
-    <input type="text" id="serviceaddress" name="serviceaddress" style = "margin-left: -80px;"><br><br>
-    <label for="devName">Port</label>    
+    <label for="monitoringip" id = "monitoringiplbl">IP Address</label>
+    <input type="text" id="monitoringip" name="monitoringip" style = "margin-left: -80px;"><br><br>
+    <label for="monitoringport">Port</label>    
     <input type="text" id="monitoringport" name="monitoringport" style = "margin-left: -80px;"><br><br><br>
   
 
     <input type="checkbox" id="failurenotifcations" style="width:20px; height:20px; margin-left: 149px;" name="FRcb" value="FR">
-    <label for="Security" style="float: left; size: 20px; margin-left: -15px; " id="SecureIOaddress">Repeated failure attempts notification</label>
+    <label for="failurenotifications" style="float: left; size: 20px; margin-left: -15px; " id="failurenotificationslbl">Repeated failure attempts notification</label>
     <br><br><br>
-    <label for="attemptslabel" style = "margin-left: 155px;">Number of attempts:</label>
+    <label for="attemptslabel" style = "margin-left: 155px;" id = "attemptslbl">Number of attempts:</label>
     <input type="text" id="attempts" name="attempts" style = "margin-left: -60px; width: 40px ;"><br><br>
     <br><br>
     
     <h4>Monitoring Message Filter</h4>
 
-    <label for="regularconnection">Access Granted</label>
+    <label for="accessgranted">Access Granted</label>
     <label class="switch"style = "margin-left: -80px;">
       <input type="checkbox">
       <span class="slider round"></span>
     </label> <br><br><br>
 
-    <label for="sslconnection">Access Denied</label>
-    <label class="switch"style = "margin-left: -80px;">
-      <input type="checkbox">
+    <label for="accessdenied" id ="accessdeniedlbl">Access Denied</label>
+    <label class="switch" style = "margin-left: -80px;">
+      <input type="checkbox" id = "accessdenied">
       <span class="slider round"></span>
     </label><br><br><br>
 
     
-    <label for="regularconnection">Alarm </label>
-    <label class="switch"style = "margin-left: -80px;">
-      <input type="checkbox">
+    <label for="alarm" id = "alarmlbl">Alarm</label>
+    <label class="switch" id = "alarm"style = "margin-left: -80px;">
+      <input type="checkbox " id = "alarm" >
       <span class="slider round"></span>
     </label> <br><br><br>
 
-    <label for="sslconnection">Failure</label>
+    <label for="failure" id = "failurelbl">Failure</label>
     <label class="switch"style = "margin-left: -80px;">
-      <input type="checkbox">
+      <input type="checkbox" id = "failure">
       <span class="slider round"></span>
     </label><br><br><br>
     
-    <label for="regularconnection">Door Status</label>
+    <label for="doorstatus">Door Status</label>
     <label class ="switch" style = "margin-left: -80px;">
-      <input type="checkbox">
+      <input type="checkbox" id = "doorstatus">
       <span class="slider round"></span>
     </label> <br><br><br>
 
-    <label for="sslconnection">Enrollment</label>
+    <label for="enrollment" id = "enrollmentlbl">Enrollment</label>
     <label class="switch"style = "margin-left: -80px;">
-      <input type="checkbox">
+      <input type="checkbox" id = "enrollment">
       <span class="slider round"></span>
     </label><br><br><br>
     
 
     <h4>PC Identification</h4>
-    <label for="macAddname">IP Address</label>
+    <label for="ipaddress">IP Address</label>
     <input type="text" id="pcidaddress" name="pciaddress" style = "margin-left: -80px;"><br><br>
-    <label for="devName">Port</label>
+    <label for="port">Port</label>
     <input type="text" id="pcport" name="pcport" style = "margin-left: -80px;"><br><br>
     
     <h4></h4>
