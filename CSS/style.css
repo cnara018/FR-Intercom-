@@ -3,7 +3,10 @@ html {
   margin: auto;
   
 }
-
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
 
 
 #nav{
@@ -177,9 +180,9 @@ select#SecureIObehavior,select#SecureIOaddress
   .switch {
     position: relative;
     display: inline-block;
-    width: 12px;
+    width: 50px;
     height: 22px;
-    size: 20px;
+    size: 50px;
   }
   
   /* Hide default HTML checkbox */
@@ -247,7 +250,7 @@ select#SecureIObehavior,select#SecureIOaddress
   
   input[type='range'] {
     overflow: hidden;
-    width: 100px;
+    width: 130px;
     -webkit-appearance: none;
     background-color: #ccc;
   }
@@ -284,24 +287,60 @@ select#SecureIObehavior,select#SecureIOaddress
     padding-bottom: 10px;
   }
  
-  .success {color: rgb(255, 255, 255);}
-  .info {color: rgb(255, 255, 255);}
-  .warning {color: rgb(255, 255, 255);}
-  .danger {color: rgb(255, 255, 255);}
-  .default {color: rgb(255, 255, 255);}
-
-.success {background-color: #4CAF50;} /* Green */
-.success:hover {background-color: #46a049;}
-
-.info {background-color: #2196F3;} /* Blue */
-.info:hover {background: #0b7dda;}
-
-.warning {background-color: #ff9800;} /* Orange */
-.warning:hover {background: #e68a00;}
-
-.danger {background-color: #f44336;} /* Red */
-.danger:hover {background: #da190b;}
-
-.default {background-color: #e7e7e7; color: black;} /* Gray */
-.default:hover {background: #ddd;}
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 240px;
+    background-color: #1E2126;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #EA4333;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 300px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
 
