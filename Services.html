@@ -58,32 +58,57 @@
         
         </div>
         <br><br>
-
-
-<h4>Monitoring Message Filter</h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
+      </div>
     
 
 
+<h4>Monitoring Message Filter</h4>
+<br>
+<div class="row">
+  <div class="col-xs" style="margin-bottom: 10px;">
+   
+<label for="accessgranted">Access Granted</label>
+<label class="switch" >
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label> <br><br><br>
+
+<label for="accessdenied" id="accessdeniedlbl">Access Denied</label>
+<label class="switch" >
+  <input type="checkbox" id="accessdenied">
+  <span class="slider round"></span>
+</label><br><br><br>
+
+
+<label for="alarm" id="alarmlbl">Alarm</label>
+<label class="switch" id="alarm">
+  <input type="checkbox " id="alarm">
+  <span class="slider round"></span>
+</label> <br><br><br>
+
+<label for="failure" id="failurelbl">Failure</label>
+<label class="switch" >
+  <input type="checkbox" id="failure">
+  <span class="slider round"></span>
+</label><br><br><br>
+
+<label for="doorstatus">Door Status</label>
+<label class="switch">
+  <input type="checkbox" id="doorstatus">
+  <span class="slider round"></span>
+</label> <br><br><br>
+
+<label for="enrollment" id="enrollmentlbl">Enrollment</label>
+<label class="switch" >
+  <input type="checkbox" id="enrollment">
+  <span class="slider round"></span>
+</label><br><br><br>
+
+
+  
+  </div>
+  <br><br>
+</div>
 
 
 
@@ -91,15 +116,39 @@
 
 
 
+<h4>PC Identification</h4>
+<br>
+<div class="row">
+  <div class="col-xs" style="margin-bottom: 10px;">
+    <label for="ipaddress">IP Address</label>
+    <input type="text" id="pcidaddress" name="pciaddress" style="margin-left: -80px;"><br><br>
+    <label for="port">Port</label>
+    <input type="text" id="pcport" name="pcport" style="margin-left: -80px;"><br><br>
+
+
+    <input type="checkbox" id="failurenotifcations" style="width:30px; height:25px; margin-left: 149px;" name="FRcb"
+      value="FR">
+    <label for="failurenotifications" style="float: left; size: 20px; margin-left: -15px; "
+      id="failurenotificationslbl">Send Images from camera</label>
+    <br><br>
+    <label for="imagenum" style="margin-left: 155px;" id="imagenumlbl">Number of images:</label>
+    <input type="text" id="imagenum" name="imagenum" style="margin-left: -30px; width: 30px ;height: 25px;;"><br><br>
+    <br><br>
+  
+  </div>
+  <br><br>
+</div>
 
 
 
 
+      
 
 
         
     
   </div>
+  
 </body>
 
 </html>
