@@ -2,120 +2,137 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <link rel="stylesheet" type="text/css" href="CSS/style.css">
-
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    
 
   <title>Device Settings - System</title>
 
-  <ul>
-    <br>
-    <img src="IdentyTech logo - white.png" alt="Flowers" style="width:200px; padding-left: 12px;">
-    <br><br><br>
-    <li><a href="Network.html">Network</a></li>
-    <li><a href="SIP.html">SIP</a></li>
-    <li><a href="Camera.html">Camera</a></li>
-    <li><a href="Biometric.html">Biometric</a></li>
-    <li><a href="Accesscontrol.html">Access Control</a></li>
-    <li><a href="Services.html">Services</a></li>
-    <li><a href="System.html">System</a></li>
-
-  </ul>
-
-<body>
-
-  <div style="margin-left:15%; padding:20px 55px; height:100px;">
-    <h2>System</h2>
+  <body>
+    <div class="sidebar">
+      <br>
+      <img src="IdentyTech logo - white.png" alt="Flowers" style="width:200px; padding-left: 12px;">
+      <br><br><br>
+      <a href="Network.html">Network</a>
+      <a href="SIP.html">SIP</a>
+      <a href="Camera.html">Camera</a>
+      <a href="Biometric.html">Biometric</a>
+      <a href="Accesscontrol.html">Access Control</a>
+      <a href="Services.html">Services</a>
+      <a class="active" href="System.html">System</a>
+  </div>
+  <br>
+  
+    <div class="content">
+      <br>
+      <h2>System</h2>
+      <br>
     <h4>General</h4>
+      <br>
+      <div class ="row">
+        <div class="container" style="margin-left: 0%; ">
+        
+          <label for="Security" id="SecureIObehavior">Language settings</label>
+          <select name="Security" id="SecureIObehavior">
+            <option value="opt1">English</option>
+            <option value="opt2">Russian</option>
+            <option value="opt3">French</option>
+            <option value="opt4">German</option>
+            <option value="opt5">Hebrew</option>
+            <option value="opt5">Turkish</option>
+            <option value="opt5">Italian</option>
+      
+          </select>
+      
+          <br><br>
+          <label for="Manual">Enrollment Sound Notifications</label>
+          <select name="Security" id="SecureIObehavior">
+            <option value="opt1">Off</option>
+            <option value="opt2">On</option>
+          
+          </select>
+          <br><br>
+      
+          <label for="Manual">Pass/Fail Sound</label>
+          <select name="Security" id="SecureIObehavior">
+            <option value="opt1">Off</option>
+            <option value="opt2">On</option>
+          
+          </select>
+          <br><br><br><br>
+      
+          <label for="Manual">Database saving option</label>
+          <select name="Security" id="SecureIObehavior">
+            <option value="opt1">Terminal</option>
+            <option value="opt2">SD card</option>
+          
+          </select> 
+          <br><br>
+          <button id= "users" style="width: 90px;height:25px;background-color: #EA4333;color: rgb(255, 255, 255);float: left; margin-left: 200px; border: 0px;">Change</button>
+      
+      
+      
+          <br><br>
+        
+        
+        </div>
 
 
-    <label for="Security" id="SecureIObehavior">Language settings</label>
-    <select name="Security" id="SecureIObehavior">
-      <option value="opt1">English</option>
-      <option value="opt2">Russian</option>
-      <option value="opt3">French</option>
-      <option value="opt4">German</option>
-      <option value="opt5">Hebrew</option>
-      <option value="opt5">Turkish</option>
-      <option value="opt5">Italian</option>
-
-    </select>
-
-    <br><br>
-    <label for="Manual">Enrollment Sound Notifications</label>
-    <select name="Security" id="SecureIObehavior">
-      <option value="opt1">Off</option>
-      <option value="opt2">On</option>
-    
-    </select>
-    <br><br>
-
-    <label for="Manual">Pass/Fail Sound</label>
-    <select name="Security" id="SecureIObehavior">
-      <option value="opt1">Off</option>
-      <option value="opt2">On</option>
-    
-    </select>
-    <br><br><br><br>
-
-    <label for="Manual">Database saving option</label>
-    <select name="Security" id="SecureIObehavior">
-      <option value="opt1">Terminal</option>
-      <option value="opt2">SD card</option>
-    
-    </select> 
-    <br><br>
-    <button id= "users" style="width: 90px;height:25px;background-color: #EA4333;color: rgb(255, 255, 255);float: left; margin-left: 230px;">Change</button>
 
 
+      </div>
 
-    <br><br>
+   
 
 <h4>Time/Date</h4>
-    <form action="/action_page.php">
-      <label for="Date">Date</label>
-      <input type="date" id="Date" name="Date">
-    </form>
-<br><br>
+<br>
 
-    <form action="/action_page.php">
-      <label for="time">Time</label>
-      <input type="time" style="width: 158px;" id="time" name="time">
-    </form>
-<br><br><BR>
-<input type="checkbox" id="failurenotifcations" style="width:20px; height:20px; margin-left: 28px;" name="FRcb"
-value="FR">
-<label for="Security" style="float: left; size: 20px; margin-left: -15px;margin-top: 5px;"
-id="SecureIOaddress">Enable NTP?</label>
-
-<br /><br /><br>
-
-<label for="NTPipaddress" >NTP Path </label>
-<input type="text" id="secureio" name="ipaddress" style="width: 132px;">
-<br><br>
-
-    <label for="Security" id=Security >NTP Continent</label>
-    <select name="Security" id="Security">
-      <option value="opt1">GMT-5 Eastern(New York)</option>
-      <option value="opt2">Enhanced</option>
-      <option value="opt3">Maximum</option>
-    </select>
-    <br><br>
-
+<div class ="row">
+  <div class="container" style="margin-left: 0%; ">
+    <div class="container" style="margin-left: 0%; ">
+      <form action="/action_page.php">
+        <label for="Date">Date</label>
+        <input type="date" id="Date" name="Date">
+      </form>
+  <br><br>
+  
+      <form action="/action_page.php">
+        <label for="time">Time</label>
+        <input type="time" style="width: 158px;" id="time" name="time">
+      </form>
+  <br><br><BR>
+  <input type="checkbox" id="failurenotifcations" style="width:20px; height:20px; margin-left: 28px;" name="FRcb"
+  value="FR">
+  <label for="Security" style="float: left; size: 20px; margin-left: -15px;margin-top: 5px;"
+  id="SecureIOaddress">Enable NTP?</label>
+  
+  <br /><br /><br>
+  
+  <label for="NTPipaddress" >NTP Path </label>
+  <input type="text" id="secureio" name="ipaddress" style="width: 132px;">
+  <br><br>
+  
+      <label for="Security" id=Security >NTP Continent</label>
+      <select name="Security" id="Security">
+        <option value="opt1">GMT-5 Eastern(New York)</option>
+        <option value="opt2">Enhanced</option>
+        <option value="opt3">Maximum</option>
+      </select>
+      <br><br>
+  
     
-    <label for="Security" id=Security >NTP Continent</label>
-    <select name="Security" id="Security">
-      <option value="opt1">GMT-5 Eastern(New York)</option>
-      <option value="opt2">Enhanced</option>
-      <option value="opt3">Maximum</option>
-    </select>
-    <br><br>
+  
+  
+      <br><br>
 
 
-    <br><br>
+</div>
+ 
 
 
 
@@ -125,12 +142,22 @@ id="SecureIOaddress">Enable NTP?</label>
     <h4>Maintenance</h4>
 
     <br>
-    <button id= "users" style="width: 90px;height:35px;background-color: #EA4333;color: rgb(255, 255, 255);float: left; margin-left: 230px;">Reboot</button>
-    <button id= "users" style="width: 90px;height:35px;background-color: #EA4333;color: rgb(255, 255, 255); margin-left: 20px;">Factory Reset</button> 
-    <br><br><br>
+    <div class ="row">
 
+      <div class="container" style="margin-left: 0%; ">
+
+        <button id= "users" style="width: 100px;height:50px;background-color: #EA4333;color: rgb(255, 255, 255);float: left; margin-left: 230px; border: 0px;">Reboot</button>
+        <button id= "users" style="width: 100px;height:50px;background-color: #EA4333;color: rgb(255, 255, 255); margin-left: 20px;border: 0px;">Factory Reset</button> 
+        <br><br><br>
+
+
+      </div>
+    </div>
     
-    <h4></h4>
+    
+
+    <br>
+ 
 
 
 
@@ -146,7 +173,34 @@ id="SecureIOaddress">Enable NTP?</label>
     output.innerHTML = this.value;
   }
   </script>
-
-</body>
+    <br><br>
+    <h4></h4>
+    </div>
+    <script>
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+      output.innerHTML = slider.value;
+      
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      }
+  
+      var slider2 = document.getElementById("myRange1");
+      var output2 = document.getElementById("demo1");
+      output2.innerHTML = slider.value;
+      
+      slider2.oninput = function() {
+        output2.innerHTML = this.value;
+      }
+      </script>
+  
+      
+  
+      </div>
+      
+  
+      
+  
+  </body>
 
 </html>

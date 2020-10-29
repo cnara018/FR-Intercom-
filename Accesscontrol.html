@@ -5,17 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+  integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="CSS/style.css">
-  
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  <title>Device Settings - Access Control</title>
+
+  <title>Device Settings - Network</title>
+
 
 
 </head>
-
 
 <body>
   <div class="sidebar">
@@ -26,97 +25,148 @@
     <a href="SIP.html">SIP</a>
     <a href="Camera.html">Camera</a>
     <a href="Biometric.html">Biometric</a>
-    <a class ="active" href="Accesscontrol.html">Access Control</a>
+    <a class="active" href="Accesscontrol.html">Access Control</a>
     <a href="Services.html">Services</a>
     <a href="System.html">System</a>
-</div>
+  </div>
   <br><br>
+  
   <div class="content">
-    
+
     <h2>Access Control</h2>
     <br>
     <h4>General</h4>
     <br>
-    <label for="identification" id="identificationlbl">Identification Mode</label>
-    <select style="float: left; width: 140px" name="identification" id="identification">
-      <option value="opt1">Local Identification</option>
-      <option value="opt2"></option>
-    </select>
+    <div class="row">
+      <div class="col-xs" style="margin-bottom: 10px;">
+        <label for="identification" id="identificationlbl">Identification Mode</label>
+        <select style="float: left; width: 160px" name="identification" id="identification">
+          <option value="opt1">Local Identification</option>
+          <option value="opt2"></option>
+        </select>
 
-    <label for="schedule" id="schedulelbl" style="margin-left: 80px;">Schedule Mode</label>
-    <label class="switch">
-      <input type="checkbox" id="schedule" />
-      <span class="slider round"></span>
-    </label>
-
-    <br /><br />
-    <label for="accessmode" id= "accessmodelbl">Access Mode</label>
-    <select name="accessmode" id="accessmode" style="float: left; width: 140px" id="accessmode">
-      <option value="opt1">User mode</option>
-      <option value="opt2">Unit mode</option>
-    </select>
-
-    <label for="tampterbuzzer" style="margin-left: 80px;">Buzzer on Tamper</label>
-    <label class="switch">
-      <input type="checkbox" id="tampterbuzzer" />
-      <span class="slider round"></span>
-    </label>
-
-    <br /><br />
-    <label for="unitmode" style="float: left" id="unitmodelbl">Unit Access Mode</label>
-    <select name="unitmode" style="float: left; width: 140px" id="unitmode">
-      <option value="opt1">Biometric only</option>
-      <option value="opt2">Wiegand Card only</option>
-      <option value="opt3">Smart Card only</option>
-    </select>
-
-    <label for="tampermode" id="tampermodelbl" style="margin-left: 80px;">Tamper Mode</label>
-    <select name="tampermode" id="tampermode">
-      <option value="opt1">Normal</option>
-      <option value="opt2">Wiegand Card only</option>
-      <option value="opt3">Smart Card only</option>
-    </select>
-
-    <br /><br />
-
-    <label for="gender" style="float: left" id="genderlbl">Gender Restriction</label>
-    <select name="gender" style="float: left; width: 140px" id="gender">
-      <option value="opt1">No Restriction</option>
-      <option value="opt2">Men only</option>
-      <option value="opt3">Women only</option>
-    </select>
-
-    <label for="minimumage" style="margin-left: 80px;">Minimum age</label>
-
-    <input type="text" id="minimumage" name="minimumage" />&nbsp;
-
-    <br /><br />
-
-    <label for="fr" style="float: left; size: 20px; " id="frlbl">Use FR</label>
-    <input type="checkbox" id="FR" style="width:20px; height:20px;" name="FRcb" value="FR">
-
-    <label for="disableunit" style="float: left; margin-left: 192px;" id="disableunitlbl">Disable Unit for FR</label>
-    <input type="checkbox" id="disableunit" style="width:20px;height:20px;" name="FRcb" value="FR">
+        <br> <br>
+        <label for="accessmode" id="accessmodelbl">Access Mode</label>
+        <select name="accessmode" id="accessmode" style="float: left; width: 160px" id="accessmode">
+          <option value="opt1">User mode</option>
+          <option value="opt2">Unit mode</option>
+        </select>
+        <br><br>
 
 
-    <br /><br />
+        <label for="unitmode" style="float: left" id="unitmodelbl">Unit Access Mode</label>
+        <select name="unitmode" style="float: left; width: 160px" id="unitmode">
+          <option value="opt1">Biometric only</option>
+          <option value="opt2">Wiegand Card only</option>
+          <option value="opt3">Smart Card only</option>
+        </select>
 
-    <h4>Relay Timing</h4>
+
+        <br><br>
+
+        <label for="gender" style="float: left" id="genderlbl">Gender Restriction</label>
+        <select name="gender" style="float: left; width: 160px" id="gender">
+          <option value="opt1">No Restriction</option>
+          <option value="opt2">Men only</option>
+          <option value="opt3">Women only</option>
+        </select>
+
+        <br><br>
+
+        <label for="fr" style="float: left; size: 20px; " id="frlbl">Use FR</label>
+        <input type="checkbox" id="FR" style="width:20px; height:20px;" name="FRcb" value="FR">
+
+
+        <br><br>
+
+
+      </div>
+
+      <div class="col-xs" style="margin-left: 40px;"></div>
+
+      <div class="col-xs" style="margin-bottom: 20px; margin-left: -80px;">
+        <label for="schedule" id="schedulelbl" style="margin-left: 80px;">Schedule Mode</label>
+        <label class="switch">
+          <input type="checkbox" id="schedule" />
+          <span class="slider round"></span>
+        </label>
+
+
+
+        <br> <br>
+        <label for="tampterbuzzer" style="margin-left: 80px;">Buzzer on Tamper</label>
+        <label class="switch">
+          <input type="checkbox" id="tampterbuzzer" />
+          <span class="slider round"></span>
+        </label>
+
+        <br><br>
+
+
+        <label for="tampermode" id="tampermodelbl" style="margin-left: 80px;">Tamper Mode</label>
+        <select name="tampermode" id="tampermode">
+          <option value="opt1">Normal</option>
+          <option value="opt2">Wiegand Card only</option>
+          <option value="opt3">Smart Card only</option>
+        </select>
+        <br><br>
+
+        <label for="minimumage" style="margin-left: 80px;">Minimum age</label>
+
+        <input type="text" style="width: 40px;" id="minimumage" name="minimumage" />&nbsp;
+        <br><br>
+
+        <label for="disableunit" style="float: left; margin-left: 80px;" id="disableunitlbl">Disable Unit for
+          FR</label>
+        <input type="checkbox" id="disableunit" style="width:20px;height:20px;" name="FRcb" value="FR">
+
+        <br><br>
+
+
+
+      </div>
+
+
+    </div>
+
+    <h4> Relay Timing </h4>
     <br>
+    <div class="row">
+      <div class="col-xs" >
+      
+        <label for="striketime" id="striketimelbl">Strike Time</label>
+        <input type="text" id="striketime" name="striketime" style="width: 40px;" />&nbsp;
+        <br><br>
+        <label for="doorheld" id="doorheldlbl">Door Held Time</label>
+        <input type="text" id="doorheldext" name="doorheld" style="width: 40px;" />&nbsp;
+        <br><br>
+      
+      
+      </div>
 
-    <label for="striketime" id="striketimelbl">Strike Time</label>
-    <input type="text" id="striketime" name="striketime" />&nbsp;
-    <label for="striketimeext" style=" margin-left: 30px;">Strike Time extended</label>
-    <input type="text" id="striketimeext" name="striketimeext" />&nbsp;<br /><br />
+      <div class="col-xs" style="margin-left: 20px; margin-bottom: 10px;"></div>
 
-    <label for="doorheld" id="doorheldlbl">Door Held Time</label>
-    <input type="text" id="doorheldext" name="doorheld" />&nbsp;
-    <label for="doorheldext" style=" margin-left: 30px;">Door Held Time extended</label>
-    <input type="text" id="doorheldext" name="doorheldext" />&nbsp;<br /><br />
+      <div class="col-xs" >
+      
+        <label for="striketimeext">Strike Time extended</label>
+        <input type="text" id="striketimeext" name="striketimeext" style="width: 40px;" />&nbsp;    
+        <br><br>
+        <label for="doorheldext" >Door Held Time extended</label>
+        <input type="text" id="doorheldext" name="doorheldext"  style="width: 40px;" />&nbsp;
 
-    <h4>Secure I/O</h4>
-    <br>
+        <br><br>
+      
+      
+      </div>
 
+  </div>
+  <h4>Secure I/O</h4>
+  <br>
+
+  <div class="row">
+    <div class="col-xs" >
+
+      
     <label for="ipaddress " id="ipaddresslbl">IP Address</label>
     <input type="text" id="ipaddress" name="ipaddress" style="width: 132px" /><br /><br />
     <label for="port">Port</label>
@@ -135,106 +185,133 @@
     </select>
     <br /><br />
 
-    <h4>Inputs</h4>
-    <br>
 
+    </div>
 
-    <label for="exitpush">Exit Push Button</label>
+  </div>
+
+  <h4>Inputs</h4>
+  <br>
+
+  <div class= "row">
+    <div class ="col-xs" style="margin-bottom: 20px;">
+
+      <label for="exitpush">Exit Push Button</label>
     <label class="switch" id = "exitpush">
       <input type="checkbox" />
       <span class="slider round"></span>
     </label>
-
-    <label for="normallyclosedEPB" style="margin-left: 50px;">Normally closed</label>
-    <label class="switch"  id = "normallyclosedEPB">
-      <input type="checkbox" />
-      <span class="slider round"></span>
-    </label>
-    <br /><br /><br />
+    <br><br>
 
     <label for="doorstatus">Door Status</label>
     <label class="switch"  id = "doorstatus">
       <input type="checkbox" />
       <span class="slider round"></span> </label>
+      <br><br>
 
-    <label for="normallyopenDS" style="margin-left: 50px;">Normally open</label>
+      <label for="breakingglass">Breaking Glass </label>
+      <label class="switch" id = "breakingglass">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+      <br><br>
+
+      <label for="firealarm">Fire Alarm</label>
+      <label class="switch" id = "firealarm">
+      <input type="checkbox" />
+      <span class="slider round"></span> </label>
+    </div>
+    <br>
+    
+    <div class="col-xs" style="margin-left:20px;"></div>
+
+    <div class ="col-xs">
+
+      <label for="normallyclosedEPB">Normally closed</label>
+    <label class="switch"  id = "normallyclosedEPB">
+      <input type="checkbox" />
+      <span class="slider round"></span>
+    </label>
+    <br><br>
+    <label for="normallyopenDS" >Normally open</label>
     <label class="switch" id = "normallyopenDS">
       <input type="checkbox" />
       <span class="slider round"></span>
     </label>
-    <br /><br /><br />
+      <br><br>
 
-    <label for="breakingglass">Breaking Glass </label>
-    <label class="switch" id = "breakingglass">
-      <input type="checkbox" />
-      <span class="slider round"></span>
-    </label>
-
-    <label for="normallyopenBG" style="margin-left: 50px;">Normally open</label>
+      <label for="normallyopenBG" >Normally open</label>
     <label class="switch" id = "normallyopenBG">
       <input type="checkbox" />
       <span class="slider round"></span>
     </label>
-    <br /><br /><br />
+      <br><br>
 
-    <label for="firealarm">Fire Alarm</label>
-    <label class="switch" id = "firealarm">
-      <input type="checkbox" />
-      <span class="slider round"></span> </label>
+      <label for="regularconnection" >Normally open</label>
+      <label class="switch">
+        <input type="checkbox" id = "normallyopenFA" />
+        <span class="slider round"></span>
+      </label>
+    </div>
 
-    <label for="regularconnection" style="margin-left: 50px;">Normally open</label>
-    <label class="switch">
-      <input type="checkbox" id = "normallyopenFA" />
-      <span class="slider round"></span>
-    </label>
-    <br /><br /><br />
 
-    <h4>RS232/RS485</h4>
+  </div>
+  <br>
+  <h4>RS232/RS485</h4>
 
-    <br>
+  
+  <div class= "row">
+    <div class ="col-xs" style="margin-bottom: 20px;">
+      <br>
+      <label for="baudrate" id="baudratelbl">Baud Rate</label>
+      <select style="float: left; width: 140px" name="baudrate" id="baudrate">
+        <option value="opt1">115200</option>
+        <option value="opt2"></option>
+      </select>
+  
+      <br><br>
+  
+      <label for="odsp" id = "odsplbl">Enable ODSP</label>
+      <label class="switch" id = "odsp">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+  
+      <br /><br />
+      <label for="stopbits" id="stopbitslbl">Stop Bits</label>
+      <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
+        <option value="opt1">1</option>
+        <option value="opt2">2</option>
+      </select>
+      <br /><br />
+  
+      <label for="parity" id="paritylbl">Parity</label>
+      <select style="float: left; width: 140px" name="parity" id="parity">
+        <option value="opt1">None</option>
+        <option value="opt2"></option>
+      </select>
+      <br /><br />
+      <label for="address" id = "addresslbl">Address</label>
+      <input type="text" id="address" name="address" />&nbsp;
+  
+      <br /><br />
+      <label for="timeout" id = "timeoutlbl" >Timeout</label>
+      <input type="text" id="timeout" style = "margin-left: 50px;" name="timeout" />&nbsp;
+      <br /><br />
 
-    <label for="baudrate" id="baudratelbl">Baud Rate</label>
-    <select style="float: left; width: 140px" name="baudrate" id="baudrate">
-      <option value="opt1">115200</option>
-      <option value="opt2"></option>
-    </select>
 
-    <br><br>
+    </div>
+  </div>
+  <br>
+<h4>Wiegand</h4>
+<div class = "row">
+  <div class ="col-xs" style="margin-bottom: 20px;">
 
-    <label for="odsp" id = "odsplbl">Enable ODSP</label>
-    <label class="switch" id = "odsp">
-      <input type="checkbox" />
-      <span class="slider round"></span>
-    </label>
-
-    <br /><br />
-    <label for="stopbits" id="stopbitslbl">Stop Bits</label>
-    <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
-      <option value="opt1">1</option>
-      <option value="opt2">2</option>
-    </select>
-    <br /><br />
-
-    <label for="parity" id="paritylbl">Parity</label>
-    <select style="float: left; width: 140px" name="parity" id="parity">
-      <option value="opt1">None</option>
-      <option value="opt2"></option>
-    </select>
-    <br /><br />
-    <label for="address" id = "addresslbl">Address</label>
-    <input type="text" id="address" name="address" />&nbsp;
-
-    <br /><br />
-    <label for="timeout" id = "timeoutlbl" >Timeout</label>
-    <input type="text" id="timeout" style = "margin-left: 50px;" name="timeout" />&nbsp;
-    <br /><br />
-
-    <h4>Wiegand</h4>
     <br>
 
 
     <h3>General</h3>
-
+    <br>
     <label for="output" id="outputlbl">Output (TX) width</label>
     <input type="text" style="width: 132px" id="output" name="output" />
     <br /><br />
@@ -242,7 +319,7 @@
     <input type="text" style="width: 132px" id="outputperiod" name="outputperiod" />
     <br><br>
     <h3>Input</h3>
-
+    <br>
     <label for="input" id="inputlbl">Input Format(RX)</label>
     <select style="float: left; width: 140px" name="input" id="input">
       <option value="opt1">26 bits</option>
@@ -259,7 +336,7 @@
       <br>
 
     <h3>Output</h3>
-
+    <br>
 
     <label for="wiegandoutput" id = "wiegandoutputlbl">Wiegand Card output</label>
     <label class="switch">
@@ -276,135 +353,181 @@
     <br><br>
 
 
-    <label for="outputformat" id="outputformatlbl" style="margin-left: 30px;">Output Format</label>
-    <select style="float: left; width: 140px; margin-left: -30px;" name="outputformat" id="outputformat">
+    <label for="outputformat" id="outputformatlbl" >Output Format</label>
+    <select style="float: left; width: 140px; " name="outputformat" id="outputformat">
       <option value="opt1">26 bits</option>
       <option value="opt2"></option>
     </select>
     <br><br>
 
-    <label for="outputfacility" id="outputfacilitylbl" style="margin-left: 30px;">Output Facility Code</label>
-    <input type="text" style="width: 132px;margin-left: -30px;" id="outputfacility" name="outputfacility" /><br /><br />
+    <label for="outputfacility" id="outputfacilitylbl" >Output Facility Code</label>
+    <input type="text" style="width: 132px;" id="outputfacility" name="outputfacility" /><br /><br /> <br>
 
     <h3>When user fails to identify output:</h3>
-
+    <br>
 
     <label for="facilitycodecard" id = "facilitycodelbl">Facility Code </label>
     <input type="text" id="facilitycode" style="width: 132px; " name="facilitycode" />
 
-    <label for="cardnumber" id = "cardnumberlbl" style="margin-left: 40px;">Card Number</label>
+    <br><br>
+
+    <label for="cardnumber" id = "cardnumberlbl" >Card Number</label>
     <input type="text" id="cardnumber" style="width: 132px;" name="cardnumber" />
     <br><br>
 
     <h3>When no biomteric presented:</h3>
-
+    <br>
 
     <label for="facilitycodebio" id = "facilitycodebiolbl">Facility Code </label>
     <input type="text" id="Port" style="width: 132px;" name="facilitycodebio" />
+    <br><br>
 
-    <label for="cardnumberbio" id = "cardnumberbiolbl"style="margin-left: 40px;">Card Number</label>
+
+    <label for="cardnumberbio" id = "cardnumberbiolbl">Card Number</label>
     <input type="text" id="cardnumberbio" style="width: 132px; " name="cardnumberbio" />
-    <br><br>    <br>
-
-
-    <h4>Elevator Settings</h4>
-    <br>    <br>
-
-
-
-
-    <label for="regularconnection">RS 232</label>
-    <label id="regswitch" class="switch" style="margin-left: -80px;">
-      <input id="rs232" type="checkbox" onclick="ch($(this));">
-      <span class="slider round"></span>
-    </label>
-    <label for="sslconnection">RS 485</label>
-    <label id="sslswitch" class="switch" style="margin-left: -80px;">
-      <input id="rs485" type="checkbox" onclick="ch1($(this));">
-      <span class="slider round"></span>
-    </label>
-    <br><br>
-    <div id="RSBOX" style=" border-style: groove; width:500px; margin-left: 30px;">
-      <br>
-      <label for="Security" id="SecureIOaddress">Baud Rate</label>
-      <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
-        <option value="opt1">115200</option>
-        <option value="opt2"></option>
-      </select>
-      <br /><br />
-      <label for="Security" id="SecureIOaddress">Stop Bits</label>
-      <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
-        <option value="opt1">1</option>
-        <option value="opt2">2</option>
-      </select>
-      <br /><br />
-      <label for="Security" id="SecureIOaddress">Parity</label>
-      <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
-        <option value="opt1">None</option>
-        <option value="opt2"></option>
-      </select>
-      <br /><br />
-      <label for="striketime">Address</label>
-      <input type="number" class="size-36" value="0" min="0" max="10" step="1">
-      <br><br>
-    </div>
-    <br><br><br>
-    
-    <label for="regularconnection">USB</label>
-    <label id="usbswitch" class="switch" style="margin-left: -80px;">
-      <input id="usb" type="checkbox" onclick="ch2($(this));">
-      <span class="slider round"></span>
-    </label>
-    <br><br>
-    <div id="usb" style="border-style: groove; width:500px; margin-left: 30px;">
-      <br>
-      <label for="striketime">USB Port#:</label>
-      <input type="number" class="size-36" value="0" min="0" max="10" step="1">
-      <br><br>
-    </div>
-    <br><br><br>
-    <label for="regularconnection">Network</label>
-    <label id="usbswitch" class="switch" style="margin-left: -80px;">
-      <input id="network" type="checkbox" onclick="ch3($(this));">
-      <span class="slider round"></span>
-    </label>
-    <br><br>
-    <div id="network"  style="border-style: groove; width:500px; margin-left: 30px;">
-      <br>
-      <label for="ipaddress">IP Address</label>
-      <input type="text" id="ipaddress" name="ipaddress" style="margin-left: -80px;"><br><br>
-      <label for="Port">Port </label>
-      <input type="Port" id="Port" name="Port" style="margin-left: -80px;">
-      <br><br>
-    </div>
-
-    <br><br>
-    <h4>Anti-passback settings</h4>
     <br>
 
 
-    <label for="localanti" id = "localantilbl">Local Anti-passback</label>
-    <label class="switch">
-      <input type="checkbox" id = "localanti" />
-      <span class="slider round"></span>
-    </label>
-    <br><br>
 
-    <label for="timedanti" id = "timedantilbl">Timed Anti-passback</label>
-    <label class="switch">
-      <input type="checkbox" id = "timedanti" />
-      <span class="slider round"></span>
-    </label>
-    <br><br>
-    <label for="time" id = "timelbl">Time (min)</label>
-    <input type="number" class="size-36" value="0" min="0" max="10" step="1">
-    <br><br>
-    <input type="checkbox" id="failurenotifcations" style="width:20px; height:20px; margin-left: 230px;" name="FRcb"
-      value="FR">
-    <label for="softanti" id ="softantilbl" style="float: left; size: 20px; margin-left: -15px;margin-top: 5px; "
-      id="softanti">Soft Anti-passback</label>
-    <br><br>
-    <h4></h4>
+
+
+
+
+
+    
+  </div>
+
+
+
+
+</div>
+<br>
+
+<h4>Elevator Settings</h4>
+<br>
+
+<div class ="row">
+  <div class ="col-xs" style="margin-bottom: 20px;">
+
+    <label for="regularconnection">RS 232</label>
+<label id="regswitch" class="switch" style="margin-left: -80px;">
+  <input id="rs232" type="checkbox" onclick="ch($(this));">
+  <span class="slider round"></span>
+</label>
+<label for="sslconnection">RS 485</label>
+<label id="sslswitch" class="switch" style="margin-left: -80px;">
+  <input id="rs485" type="checkbox" onclick="ch1($(this));">
+  <span class="slider round"></span>
+</label>
+<br><br>
+<div id="RSBOX" style=" border-style: groove; width:500px; margin-left: 30px;">
+  <br>
+  <label for="Security" id="SecureIOaddress">Baud Rate</label>
+  <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
+    <option value="opt1">115200</option>
+    <option value="opt2"></option>
+  </select>
+  <br /><br />
+  <label for="Security" id="SecureIOaddress">Stop Bits</label>
+  <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
+    <option value="opt1">1</option>
+    <option value="opt2">2</option>
+  </select>
+  <br /><br />
+  <label for="Security" id="SecureIOaddress">Parity</label>
+  <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
+    <option value="opt1">None</option>
+    <option value="opt2"></option>
+  </select>
+  <br /><br />
+  <label for="striketime">Address</label>
+  <input type="number" class="size-36" value="0" min="0" max="10" step="1">
+  <br><br>
+</div>
+<br><br><br>
+
+<label for="regularconnection">USB</label>
+<label id="usbswitch" class="switch" style="margin-left: -80px;">
+  <input id="usb" type="checkbox" onclick="ch2($(this));">
+  <span class="slider round"></span>
+</label>
+<br><br>
+<div id="usb" style="border-style: groove; width:500px; margin-left: 30px;">
+  <br>
+  <label for="striketime">USB Port#:</label>
+  <input type="number" class="size-36" value="0" min="0" max="10" step="1">
+  <br><br>
+</div>
+<br><br><br>
+<label for="regularconnection">Network</label>
+<label id="usbswitch" class="switch" style="margin-left: -80px;">
+  <input id="network" type="checkbox" onclick="ch3($(this));">
+  <span class="slider round"></span>
+</label>
+<br><br>
+<div id="network"  style="border-style: groove; width:500px; margin-left: 30px;">
+  <br>
+  <label for="ipaddress">IP Address</label>
+  <input type="text" id="ipaddress" name="ipaddress" style="margin-left: -80px;"><br><br>
+  <label for="Port">Port </label>
+  <input type="Port" id="Port" name="Port" style="margin-left: -80px;">
+  <br><br> <br> <br>
+</div>
+
+
+
+
+ </div>
+ <br> <br>
+ 
+
+
+
+</div>
+<br>
+
+<h4>Anti-passback settings</h4>
+ <br><br>
+
+
+ <label for="localanti" id = "localantilbl">Local Anti-passback</label>
+ <label class="switch">
+   <input type="checkbox" id = "localanti" />
+   <span class="slider round"></span>
+ </label>
+ <br><br>
+
+ <label for="timedanti" id = "timedantilbl">Timed Anti-passback</label>
+ <label class="switch">
+   <input type="checkbox" id = "timedanti" />
+   <span class="slider round"></span>
+ </label>
+ <br><br>
+ <label for="time" id = "timelbl">Time (min)</label>
+ <input type="number" class="size-36" value="0" min="0" max="10" step="1">
+ <br><br>
+ <input type="checkbox" id="failurenotifcations" style="width:20px; height:20px; margin-left: 230px;" name="FRcb"
+   value="FR">
+ <label for="softanti" id ="softantilbl" style="float: left; size: 20px; margin-left: -15px;margin-top: 5px; "
+   id="softanti">Soft Anti-passback</label>
+ <br><br>
+ <h4></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
 
 
