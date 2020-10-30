@@ -327,8 +327,9 @@ select#SecureIObehavior,select#SecureIOaddress
   .sidebar a {
     display: block;
     color: rgb(255, 255, 255);
-    padding: 16px;
+    padding: 20px;
     text-decoration: none;
+    text-align: left;
   }
   
   /* Active/current link */
@@ -383,7 +384,7 @@ select#SecureIObehavior,select#SecureIOaddress
     <br>
     <img src="IdentyTech logo - white.png" alt="Flowers" style="width:200px; margin-left: -8px;">
     <br><br><br>
-    <a class="link" href="#Network">Network</a>
+    <a class="link active" href="#Network">Network</a>
     <a class="link" href="#SIP">SIP</a>
     <a class="link" href="#Camera">Camera</a>
     <a class="link" href="#Biometric">Biometric</a>
@@ -396,8 +397,13 @@ select#SecureIObehavior,select#SecureIOaddress
   <br><br>
 
   
-  <div id="Network" class="content">
+  
 
+  
+
+  
+  <div id="Network" class="content">
+    <br><br>
 
     <h2>Network</h2>
     <br>
@@ -488,7 +494,7 @@ select#SecureIObehavior,select#SecureIOaddress
 
 
   <div id="SIP" class="content">
-    
+    <br><br>
     <h2>SIP</h2>
     <br>
 
@@ -515,6 +521,8 @@ select#SecureIObehavior,select#SecureIOaddress
 
 
   <div id="Camera" class ="content">
+
+    <br><br>
     <h2>Camera</h2>
     <br>
     <h4>Live View</h4>
@@ -589,7 +597,7 @@ Your browser does not support HTML video.
 
 
 <div  id="Biometric" class="content">
-  <br>
+  <br><br>
   <h2>Biometric</h2>
   <br>
   <h4>Fingerprint Settings</h4>
@@ -737,7 +745,7 @@ Your browser does not support HTML video.
 
 
   <div id="Accesscontrol" class="content">
-
+    <br><br>
     <h2>Access Control</h2>
     <br>
     <h4>General</h4>
@@ -1225,7 +1233,7 @@ Your browser does not support HTML video.
 
 
   <div id="Services" class="content">
-    <br>
+    <br><br>
     <h2>Services</h2>
     <br>
     <h4>Monitoring</h4>
@@ -1338,7 +1346,7 @@ Your browser does not support HTML video.
 
 
   <div id="System" class="content">
-    <br>
+    <br><br>
     <h2>System</h2>
     <br>
   <h4>General</h4>
@@ -1524,7 +1532,8 @@ var slider = document.getElementById("myRange2");
 
 
 
-$('.content').hide()
+$('.content').hide().filter('.content#Network').toggle();
+
 $('a[href^="#"]').on('click', function(event){
 
   $('.link').removeClass('active').filter(this).toggleClass('active');
