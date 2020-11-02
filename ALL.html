@@ -12,12 +12,22 @@
   <title>Device Settings - Network</title>
 
 <style>
+
+  
  html {
   height: 100%;
   margin: auto;
   
 }
-
+img{
+  width:200px; 
+  margin-left: -8px;
+}
+input,select
+{
+  width: 132px;
+  margin-left: -40px;
+}
 text{
   font-size: 12px;
 }
@@ -75,6 +85,12 @@ ul {
 
   
   }
+
+  input#FR,#disableunit
+  {
+    width:20px; 
+    height:20px;
+  }
   h3{
     font-size: medium;
     margin-left: 20px;
@@ -102,7 +118,6 @@ ul {
 
 label{
     display: inline-block;
-    float: left;
     padding-left: 30px;
     width: 200px;
     text-align: left;
@@ -112,7 +127,6 @@ label{
 }
 input {
   display: inline-block;
-  float: left;
   font-family: Verdana, sans-serif;
   font-size: 12px;
 
@@ -132,22 +146,13 @@ label#timeoutlbl
   margin-right: -50px;
 }
 
-input#timeout
-{
-  margin-left: -55px;
 
-}
 #r
 {
   float: left;
 }
 
-input#spoofthreshold
-{
-  margin-left: -70px;
-  width: 60px
 
-}
 
 #cameraselection>#imglabel
 {
@@ -156,11 +161,7 @@ input#spoofthreshold
 select{
   font-size: 12px;
 }
-select#Security,select#Quality,select#Sensitivity,select#Rotation,select#Accuracyspeed
-{
-  float: left;
-  width: 148px;
-}
+
 select#resolution
 {
    margin-right: 20px;
@@ -170,15 +171,8 @@ select#imagemode
   margin-right: 20px;
 
 }
-input#framerate
-{
-  width: 20px;
-}
 
-label#latencyswitch.switch,label#spoofswitch.switch,label#senseswitch.switch,label#latencyswitch.switch,label#guideswitch.switch
-{
-margin-left: -60px;
-}
+
 
 input#relaytiming
 {
@@ -382,7 +376,7 @@ select#SecureIObehavior,select#SecureIOaddress
   
   <div class="sidebar">
     <br>
-    <img src="IdentyTech logo - white.png" alt="Flowers" style="width:200px; margin-left: -8px;">
+    <img src="IdentyTech logo - white.png" alt="Flowers" >
     <br><br><br>
     <a class="link active" href="#Network">Network</a>
     <a class="link" href="#SIP">SIP</a>
@@ -411,21 +405,21 @@ select#SecureIObehavior,select#SecureIOaddress
     <h4>General</h4>
     <br>
     <label for="macAddress">MAC Address</label>
-    <input type="text" id="macAddress" value="1C:FE:A7:FE:FE:FE" readonly style="margin-left: -40px;"><br><br>
+    <input type="text" id="macAddress" value="1C:FE:A7:FE:FE:FE" readonly ><br><br>
     <label for="devName">Device Name</label>
-    <input type="text" id="devName" name="devName" style="margin-left: -40px;"><br><br>
+    <input type="text" id="devName" name="devName"><br><br>
 
     <h4> Connection Type</h4>
     <br>
 
     <label for="regularconnection">Regular</label>
-    <label id="regswitch" class="switch" style="margin-left: -40px;">
+    <label id="regswitch" class="switch">
       <input id="regSwitch" type="checkbox" onclick="ch4($(this));">
       <span class="slider round"></span>
     </label> <br><br>
 
     <label for="sslconnection">SSL</label>
-    <label id="sslswitch" class="switch" style="margin-left: -40px;">
+    <label id="sslswitch" class="switch" >
       <input id="sslSwitch" type="checkbox" onclick="ch5($(this));">
       <span class="slider round"></span>
     </label><br><br>
@@ -437,15 +431,15 @@ select#SecureIObehavior,select#SecureIOaddress
     <br>
 
     <label for="ipaddress">IP Address</label>
-    <input type="text" id="ipaddress" name="ipaddress" style="margin-left: -40px;"><br><br>
+    <input type="text" id="ipaddress" name="ipaddress" ><br><br>
     <label for="subnetmask">Subnet Mask</label>
-    <input type="text" id="subnetmask" name="subnetmask" style="margin-left: -40px;"><br><br>
+    <input type="text" id="subnetmask" name="subnetmask" ><br><br>
     <label for="gateway">Gateway</label>
-    <input type="text" id="gateway" name="gateway" style="margin-left: -40px;"><br><br>
+    <input type="text" id="gateway" name="gateway" ><br><br>
     <label for="primaryDNS">Primary DNS</label>
-    <input type="text" id="primaryDNS" name="primaryDNS" style="margin-left: -40px;"><br><br>
+    <input type="text" id="primaryDNS" name="primaryDNS" ><br><br>
     <label for="secondaryDNS">Secondary DNS</label>
-    <input type="text" id="secondaryDNS" name="secondaryDNS " style="margin-left: -40px;"><br><br>
+    <input type="text" id="secondaryDNS" name="secondaryDNS " ><br><br>
 
     <br>
 
@@ -458,11 +452,11 @@ select#SecureIObehavior,select#SecureIOaddress
       <div class="row">
         <div class="col-xs" style="margin-bottom: 20px;">
           <label for="Port">Port </label>
-          <input type="Port" id="Port" name="Port" style="margin-left: -40px;">
+          <input type="Port" id="Port" name="Port" >
           <br> <br>
 
           <label for="sslport">SSL Port</label>
-          <input type="Port" id="Port" name="Port" style="margin-left: -40px;">
+          <input type="sslPort" id="sslPort" name="sslPort">
         </div>
 
          
@@ -470,13 +464,13 @@ select#SecureIObehavior,select#SecureIOaddress
 
         <div class="col-xs" >
           <label for="disoveryPort">Discovery Port</label>
-          <input type="disoveryPort" id="disoveryPort" name="disoveryPort" style="margin-left: -40px;" value="5001"
-            readonly style="margin-left: -40px;">
+          <input type="disoveryPort" id="disoveryPort" name="disoveryPort" value="5001"
+            readonly >
           <br> <br>
 
           <label for="ssldiscoveryport">SSL Discovery Port</label>
-          <input type="ssldiscoveryport" id="ssldiscoveryport" name="ssldiscoveryport" style="margin-left: -40px;"
-            value="5051" readonly style="margin-left: -40px;">
+          <input type="ssldiscoveryport" id="ssldiscoveryport" name="ssldiscoveryport"
+            value="5051" readonly>
 
         </div>
       </div>
@@ -501,18 +495,18 @@ select#SecureIObehavior,select#SecureIOaddress
     <h4>Account</h4>
     <br>
     <label for="domain">Domain</label>
-    <input type="text" id="domain" name="domain" style = "margin-left: -80px;"><br><br>
+    <input type="text" id="domain" name="domain" ><br><br>
     <label for="userid">User ID</label>
-    <input type="text" id="userid" name="userid" style = "margin-left: -80px;"><br><br>
+    <input type="text" id="userid" name="userid" ><br><br>
     <label for="password">Password</label>
-    <input type="text" id="password" name="password" style = "margin-left: -80px;"><br><br>
+    <input type="text" id="password" name="password" ><br><br>
     <label for="recepientext">Recipient Ext. </label>
-    <input type="text" id="recepientext" name="recepientext"style = "margin-left: -80px;"><br><br><br>
+    <input type="text" id="recepientext" name="recepientext"><br><br><br>
 
     <h4>SIP Settings</h4>
     <br>
     <label for="sipport">SIP Port</label>
-    <input type="text" id="sipport" name="sipport" style = "margin-left: -80px;" value="5060" readonly><br><br><br>
+    <input type="text" id="sipport" name="sipport"  value="5060" readonly><br><br><br>
     
     <h4></h4>
   
@@ -608,13 +602,13 @@ Your browser does not support HTML video.
     <div class="row">
       <div class="col-xs" style="margin-bottom: 10px;">
         <label for="identification" id="identificationlbl">Identification Mode</label>
-  <select style="width: 140px" name="identification" id="identification">
+  <select name="identification" id="identification">
     <option value="opt1">Local Identification</option>
     <option value="opt2"></option>
   </select>
         <br> <br>
         <label for="accessmode" id= "accessmodelbl">Access Mode</label>
-  <select name="accessmode" id="accessmode" style=" width: 140px" id="accessmode">
+  <select name="accessmode" id="accessmode" id="accessmode">
     <option value="opt1">User mode</option>
     <option value="opt2">Unit mode</option>
   </select>
@@ -622,7 +616,7 @@ Your browser does not support HTML video.
 
           
         <label for="unitmode" style="float: left" id="unitmodelbl">Unit Access Mode</label>
-        <select name="unitmode" style=" width: 140px" id="unitmode">
+        <select name="unitmode" id="unitmode">
           <option value="opt1">Biometric only</option>
           <option value="opt2">Wiegand Card only</option>
           <option value="opt3">Smart Card only</option>
@@ -630,8 +624,8 @@ Your browser does not support HTML video.
 
       <br><br>
 
-      <label for="gender" style="float: left" id="genderlbl">Gender Restriction</label>
-  <select name="gender" style=" width: 140px" id="gender">
+      <label for="gender"  id="genderlbl">Gender Restriction</label>
+  <select name="gender" id="gender">
     <option value="opt1">No Restriction</option>
     <option value="opt2">Men only</option>
     <option value="opt3">Women only</option>
@@ -640,7 +634,7 @@ Your browser does not support HTML video.
       <br><br>
 
       <label for="fr" style=" size: 20px; " id="frlbl">Use FR</label>
-  <input type="checkbox" id="FR" style="width:20px; height:20px;" name="FRcb" value="FR">
+  <input type="checkbox" id="FR"  name="FRcb" value="FR">
   
       <br><br>
 
@@ -656,7 +650,7 @@ Your browser does not support HTML video.
 
         <br> <br>
         <label for="latency" id=latency>Latency</label>
-        <label  class="switch" style="margin-left: -10px;">
+        <label  class="switch" >
           <input type ="checkbox" >
           <span class="slider round"></span>
         </label>
@@ -664,14 +658,14 @@ Your browser does not support HTML video.
 
           
         <label for="spoofswitch"id="spoofswitch">Spoof Detection</label>
-        <label id = "spoofswitch"class="switch" style="margin-left: -10px;">
+        <label id = "spoofswitch"class="switch">
           <input type="checkbox" >
           <span class="slider round"></span></label>
   
           <br><br>
 
           <label for="spoofthreshold" id="spoofthreshold" >Spoof Threshold</label>
-          <input type="text" id="spoofthreshold" name="spoofthreshold"  style="margin-left: -10px;">
+          <input type="text" id="spoofthreshold" name="spoofthreshold" >
     
     
       <br><br>
@@ -753,22 +747,22 @@ Your browser does not support HTML video.
     <div class="row">
       <div class="col-xs" style="margin-bottom: 10px;">
         <label for="identification" id="identificationlbl">Identification Mode</label>
-        <select style="float: left; width: 160px" name="identification" id="identification">
+        <select name="identification" id="identification">
           <option value="opt1">Local Identification</option>
           <option value="opt2"></option>
         </select>
 
         <br> <br>
         <label for="accessmode" id="accessmodelbl">Access Mode</label>
-        <select name="accessmode" id="accessmode" style="float: left; width: 160px" id="accessmode">
+        <select name="accessmode" id="accessmode"  id="accessmode">
           <option value="opt1">User mode</option>
           <option value="opt2">Unit mode</option>
         </select>
         <br><br>
 
 
-        <label for="unitmode" style="float: left" id="unitmodelbl">Unit Access Mode</label>
-        <select name="unitmode" style="float: left; width: 160px" id="unitmode">
+        <label for="unitmode" id="unitmodelbl">Unit Access Mode</label>
+        <select name="unitmode"  id="unitmode">
           <option value="opt1">Biometric only</option>
           <option value="opt2">Wiegand Card only</option>
           <option value="opt3">Smart Card only</option>
@@ -777,8 +771,8 @@ Your browser does not support HTML video.
 
         <br><br>
 
-        <label for="gender" style="float: left" id="genderlbl">Gender Restriction</label>
-        <select name="gender" style="float: left; width: 160px" id="gender">
+        <label for="gender" id="genderlbl">Gender Restriction</label>
+        <select name="gender"  id="gender">
           <option value="opt1">No Restriction</option>
           <option value="opt2">Men only</option>
           <option value="opt3">Women only</option>
@@ -786,8 +780,8 @@ Your browser does not support HTML video.
 
         <br><br>
 
-        <label for="fr" style="float: left; size: 20px; " id="frlbl">Use FR</label>
-        <input type="checkbox" id="FR" style="width:20px; height:20px;" name="FRcb" value="FR">
+        <label for="fr" id="frlbl">Use FR</label>
+        <input type="checkbox" id="FR"  name="FRcb" value="FR">
 
 
         <br><br>
@@ -797,8 +791,8 @@ Your browser does not support HTML video.
 
       <div class="col-xs" style="margin-left: 40px;"></div>
 
-      <div class="col-xs" style="margin-bottom: 20px; margin-left: -80px;">
-        <label for="schedule" id="schedulelbl" style="margin-left: 80px;">Schedule Mode</label>
+      <div class="col-xs" style="margin-bottom: 20px; ">
+        <label for="schedule" id="schedulelbl" >Schedule Mode</label>
         <label class="switch">
           <input type="checkbox" id="schedule" />
           <span class="slider round"></span>
@@ -807,7 +801,7 @@ Your browser does not support HTML video.
 
 
         <br> <br>
-        <label for="tampterbuzzer" style="margin-left: 80px;">Buzzer on Tamper</label>
+        <label for="tampterbuzzer">Buzzer on Tamper</label>
         <label class="switch">
           <input type="checkbox" id="tampterbuzzer" />
           <span class="slider round"></span>
@@ -816,7 +810,7 @@ Your browser does not support HTML video.
         <br><br>
 
 
-        <label for="tampermode" id="tampermodelbl" style="margin-left: 80px;">Tamper Mode</label>
+        <label for="tampermode" id="tampermodelbl" >Tamper Mode</label>
         <select name="tampermode" id="tampermode">
           <option value="opt1">Normal</option>
           <option value="opt2">Wiegand Card only</option>
@@ -824,14 +818,13 @@ Your browser does not support HTML video.
         </select>
         <br><br>
 
-        <label for="minimumage" style="margin-left: 80px;">Minimum age</label>
+        <label for="minimumage">Minimum age</label>
 
-        <input type="text" style="width: 40px;" id="minimumage" name="minimumage" />&nbsp;
+        <input type="text"id="minimumage" name="minimumage" />&nbsp;
         <br><br>
 
-        <label for="disableunit" style="float: left; margin-left: 80px;" id="disableunitlbl">Disable Unit for
-          FR</label>
-        <input type="checkbox" id="disableunit" style="width:20px;height:20px;" name="FRcb" value="FR">
+        <label for="disableunit"  id="disableunitlbl">Disable Unit for FR</label>
+        <input type="checkbox" id="disableunit" name="FRcb" value="FR">
 
         <br><br>
 
@@ -881,9 +874,9 @@ Your browser does not support HTML video.
 
       
     <label for="ipaddress " id="ipaddresslbl">IP Address</label>
-    <input type="text" id="ipaddress" name="ipaddress" style="width: 132px" /><br /><br />
+    <input type="text" id="ipaddress" name="ipaddress" /><br /><br />
     <label for="port">Port</label>
-    <input type="text" id="port" name="port" style="width: 132px" /><br /><br />
+    <input type="text" id="port" name="port"  /><br /><br />
 
     <label for="connectiontype" id="connectiontypelbl">Connection Type</label>
     <select name="connectiontype" id="connectiontype" style="width: 80px;">
