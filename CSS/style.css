@@ -100,15 +100,12 @@ input {
 
   
 }
+
 input#Encryption
 {
   width: 140px;
 }
 
-label#regswitch.switch,label#sslswitch.switch
-{
-  margin-right: -50px;
-}
 label#timeoutlbl
 {
   margin-right: -50px;
@@ -131,10 +128,8 @@ input#spoofthreshold
 
 }
 
-#cameraselection>#imglabel
-{
-  margin-left: 20px;
-}
+
+
 select{
   font-size: 12px;
 }
@@ -292,6 +287,7 @@ select#SecureIObehavior,select#SecureIOaddress
     padding-left: 10px;
     margin-right: 20px;
     padding-bottom: 10px;
+    margin-left: -50px;
   }
  
   .sidebar {

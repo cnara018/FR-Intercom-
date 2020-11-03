@@ -26,7 +26,6 @@ img{
 input,select
 {
   width: 132px;
-  margin-left: -40px;
 }
 text{
   font-size: 12px;
@@ -96,24 +95,7 @@ ul {
     margin-left: 20px;
     
   }
-  #mydevices>p{
-    position: relative;
-    border-bottom: 2px solid rgb(199, 198, 198);
-    margin-left: 70px;
-    padding-top: 20px;
-    width:40%;
-    font-family: Verdana, sans-serif;
-    font-size: 12px;
-
-    
-    
-  }
-  #mydevices>p>button{
-    margin-left: 20px;
-    float: right;
-    margin-bottom: 20px;
-  }
-
+ 
 
 
 label{
@@ -129,19 +111,12 @@ input {
   display: inline-block;
   font-family: Verdana, sans-serif;
   font-size: 12px;
-
+  
   
 }
-input#Encryption
-{
-  width: 140px;
-}
+
 
 label#regswitch.switch,label#sslswitch.switch
-{
-  margin-right: -50px;
-}
-label#timeoutlbl
 {
   margin-right: -50px;
 }
@@ -154,23 +129,12 @@ label#timeoutlbl
 
 
 
-#cameraselection>#imglabel
-{
-  margin-left: 20px;
-}
 select{
   font-size: 12px;
+  margin-bottom: 10px;
 }
 
-select#resolution
-{
-   margin-right: 20px;
-}
-select#imagemode
-{
-  margin-right: 20px;
 
-}
 
 
 
@@ -294,16 +258,36 @@ select#SecureIObehavior,select#SecureIOaddress
   .btn:hover {background: #eee;}
 
 
-  #orientation>button:hover 
+  #change
   {
-    background:  #2196F3;
-   
+   background-color:  #EA4333;
+   color: white; 
+   font-size: 12px;
+   width: 90px;
+   height: 25px;
+   margin-left: 120px;
   }
+
+
+  #reboot,#reset
+  {
+   background-color:  #EA4333;
+   color: white; 
+   font-size: 12px;
+   width: 90px;
+   height: 25px;
+   margin-left: 120px;
+
+  }
+
   #orientation>button
   {
-    padding-left: 10px;
-    margin-right: 20px;
-    padding-bottom: 10px;
+   background-color:  #EA4333;
+   color: white; 
+   font-size: 12px;
+   width: 90px;
+   height: 25px;
+   
   }
  
   .sidebar {
@@ -458,11 +442,12 @@ select#SecureIObehavior,select#SecureIOaddress
           <label for="sslport">SSL Port</label>
           <input type="sslPort" id="sslPort" name="sslPort">
         </div>
+        <div class="col-xs" style="width: 50px;"></div>
 
-         
+
       
 
-        <div class="col-xs" >
+        <div class="col-xs"  >
           <label for="disoveryPort">Discovery Port</label>
           <input type="disoveryPort" id="disoveryPort" name="disoveryPort" value="5001"
             readonly >
@@ -482,7 +467,6 @@ select#SecureIObehavior,select#SecureIOaddress
 
 
 
-    <h4></h4>
 
   </div>
 
@@ -508,7 +492,6 @@ select#SecureIObehavior,select#SecureIOaddress
     <label for="sipport">SIP Port</label>
     <input type="text" id="sipport" name="sipport"  value="5060" readonly><br><br><br>
     
-    <h4></h4>
   
   </div>   
   
@@ -533,7 +516,7 @@ Your browser does not support HTML video.
 
 
 <label for="resolution">Resolution</label>
-<select name="resolution" id="resolution" style = "margin-left: -80px;">
+<select name="resolution" id="resolution">
 <option value="opt1">1280x720 (16:9)</option>
 <option value="opt2">Saab</option>
 <option value="opt3">Opel</option>
@@ -541,27 +524,27 @@ Your browser does not support HTML video.
 </select>
 <br><br>
 <label for="framerate">Frame Rate</label>
-<input type="text" id="framerate" name="framerate" style = "margin-left: -80px; width: 30px;" > [0-60] fps<br><br>
+<input type="text" id="framerate" name="framerate"> [0-60] fps<br><br>
 
 
 
 <label for="compression">Compression</label>
-<div class="slidecontainer"> 
-    <input type="range" id="myRange" min="0" max="10" value="5"style = "margin-left: -80px;">
+    <input type="range" id="myRange" min="0" max="10" value="5">
    <span id="demo"></span> 
-</div>
-<br>
+<br><br>
 <div id = orientation>
 <h4>Image Orientation</h4>  
 <br>
+
 <label for="rotation">Rotation</label> 
-<button type="button" id = "90shift"style = "margin-left: -80px;">90&deg;</button>
+
+<button type="button" id = "90shift">90&deg;</button>
 <button type="button" id = "180shift">180&deg;</button>
 <button type="button" id = "270shift">270&deg;</button>
 <br><br>
 
 <label for="mirror">Mirror</label>
-<label class="switch"style = "margin-left: -80px;">
+<label class="switch">
   <input type="checkbox" id="mirror">
   <span class="slider round"></span>
 </label> <br><br>
@@ -569,20 +552,25 @@ Your browser does not support HTML video.
 
 <h4>Camera Selection</h4> 
 <br>
-<div id= cameraselection>
-<input type="radio" id="internal" name="internal" value="Internal">
-<label for="male" id = "intern">Internal</label><br><br>
-<input type="radio" id="external" name="external" value="external">
-<label for="female" id = "extern">External</label><br><br>
+<label for="Internal">Internal</label>
+<label id="internallbl" class="switch">
+  <input id="intswitch" type="checkbox" onclick="ch4($(this));">
+  <span class="slider round"></span>
+</label> <br><br>
+
+<label for="external">External</label>
+<label id="externallbl" class="switch" >
+  <input id="externalswitch" type="checkbox" onclick="ch5($(this));">
+  <span class="slider round"></span>
+</label><br><br>
+
 <label for="imagemode" id = imglabel >Image mode</label>
-<select name="imagemode" id="imagemode" style = "margin-left: -20px;">
+<select name="imagemode" id="imagemode">
 <option value="opt1">Color Mode</option>
 <option value="opt2">IR 18:00</option>
 <option value="opt3">Regular 08:00</option>
 </select>
 <br><br>
-  <h4></h4>
-</div>
 
 
 </div>
@@ -604,7 +592,13 @@ Your browser does not support HTML video.
         <label for="identification" id="identificationlbl">Identification Mode</label>
   <select name="identification" id="identification">
     <option value="opt1">Local Identification</option>
-    <option value="opt2"></option>
+    <option value="opt2">PC Identification</option>
+    <option value="opt3">Identification by Secure IO</option>
+    <option value="opt4">Verification</option>
+    <option value="opt5">Verification by Secure IO</option>
+    <option value="opt6">Template on Card</option>
+    <option value="opt7">Template on Card by Secure IO</option>
+
   </select>
         <br> <br>
         <label for="accessmode" id= "accessmodelbl">Access Mode</label>
@@ -615,7 +609,7 @@ Your browser does not support HTML video.
         <br><br>
 
           
-        <label for="unitmode" style="float: left" id="unitmodelbl">Unit Access Mode</label>
+        <label for="unitmode"   id="unitmodelbl">Unit Access Mode</label>
         <select name="unitmode" id="unitmode">
           <option value="opt1">Biometric only</option>
           <option value="opt2">Wiegand Card only</option>
@@ -634,14 +628,16 @@ Your browser does not support HTML video.
       <br><br>
 
       <label for="fr" style=" size: 20px; " id="frlbl">Use FR</label>
-  <input type="checkbox" id="FR"  name="FRcb" value="FR">
+      <input type="checkbox" id="FR"  name="FRcb" value="FR">
   
       <br><br>
 
 
       </div>
+      <div class="col-xs" style="width: 50px;"></div>
 
-      <div class="col-xs" style="margin-bottom: 20px; margin-left: 50px;">
+
+      <div class="col-xs" style="margin-bottom: 20px;">
         <label for="timeout" id="timeoutlbl">Timeout</label>
         <input id ="myRange2"  type="range" min="0" max="10" value="5" > 	&nbsp;
         <span id="demo2"></span>
@@ -666,10 +662,13 @@ Your browser does not support HTML video.
 
           <label for="spoofthreshold" id="spoofthreshold" >Spoof Threshold</label>
           <input type="text" id="spoofthreshold" name="spoofthreshold" >
+          
     
-    
-      <br><br>
+          <br><br>
 
+          <label for="fr"  id="frlbl">Disable unit on FR</label>
+          <input type="checkbox" id="FR"  name="FRcb" value="FR">
+  
 
 
       </div>
@@ -704,19 +703,24 @@ Your browser does not support HTML video.
   
     </div>
 
-    <div class="col-xs" style="margin-bottom: 20px;">
-      <label for="guidemode"style = "margin-left: 55px;">Guide Mode</label>
-      <label id = "guideswitch" class="switch" style="margin-left: -20px;" >
-        <input type="checkbox">
-        <span class="slider round"></span>
+    <div class="col-xs" style="width: 30px;"></div>
 
 
-      <br> <br> <br>
-      
-      <label for="sensemode" style="margin-left: -210px;">Sense Mode</label>
-      <label id = "senseswitch"class="switch" style="margin-left: -30px;">
-        <input type="checkbox">
+    <div class="col-xs"  style="margin-bottom: 20px;">
+      <label for="guidemode" id=latency>Guide Mode</label>
+      <label id="guidemode" class="switch" >
+        <input type ="checkbox" >
         <span class="slider round"></span>
+      </label>
+      <br><br>
+
+        
+      <label for="sensemode"id="spoofswitch">Sense Mode</label>
+      <label id = "sensemode"class="switch">
+        <input type="checkbox" >
+        <span class="slider round"></span></label>
+
+        <br><br>
 
 
     </div>
@@ -728,7 +732,6 @@ Your browser does not support HTML video.
    
 </div>
 <br><br>
-<h4></h4>
 </div>
 
 
@@ -789,7 +792,7 @@ Your browser does not support HTML video.
 
       </div>
 
-      <div class="col-xs" style="margin-left: 40px;"></div>
+      <div class="col-xs" style="width: 50px;"></div>
 
       <div class="col-xs" style="margin-bottom: 20px; ">
         <label for="schedule" id="schedulelbl" >Schedule Mode</label>
@@ -841,24 +844,24 @@ Your browser does not support HTML video.
       <div class="col-xs" >
       
         <label for="striketime" id="striketimelbl">Strike Time</label>
-        <input type="text" id="striketime" name="striketime" style="width: 40px;" />&nbsp;
+        <input type="text" id="striketime" name="striketime"  />&nbsp;
         <br><br>
         <label for="doorheld" id="doorheldlbl">Door Held Time</label>
-        <input type="text" id="doorheldext" name="doorheld" style="width: 40px;" />&nbsp;
+        <input type="text" id="doorheldext" name="doorheld" />&nbsp;
         <br><br>
       
       
       </div>
 
-      <div class="col-xs" style="margin-left: 20px; margin-bottom: 10px;"></div>
+      <div class="col-xs" style="width: 45px;"></div>
 
       <div class="col-xs" >
       
         <label for="striketimeext">Strike Time extended</label>
-        <input type="text" id="striketimeext" name="striketimeext" style="width: 40px;" />&nbsp;    
+        <input type="text" id="striketimeext" name="striketimeext" />&nbsp;    
         <br><br>
         <label for="doorheldext" >Door Held Time extended</label>
-        <input type="text" id="doorheldext" name="doorheldext"  style="width: 40px;" />&nbsp;
+        <input type="text" id="doorheldext" name="doorheldext" />&nbsp;
 
         <br><br>
       
@@ -879,13 +882,13 @@ Your browser does not support HTML video.
     <input type="text" id="port" name="port"  /><br /><br />
 
     <label for="connectiontype" id="connectiontypelbl">Connection Type</label>
-    <select name="connectiontype" id="connectiontype" style="width: 80px;">
+    <select name="connectiontype" id="connectiontype" >
       <option value="opt1">Network</option>
       <option value="opt2">RS485</option>
     </select>
     <br /><br />
     <label for="behavior" id="behaviorlbl">Behavior</label>
-    <select name="behavior" id="behavior" style="width: 80px;" >
+    <select name="behavior" id="behavior" >
       <option value="opt1">Master</option>
       <option value="opt2">Slave</option>
     </select>
@@ -929,7 +932,7 @@ Your browser does not support HTML video.
     </div>
     <br>
     
-    <div class="col-xs" style="margin-left:20px;"></div>
+    <div class="col-xs" style="width: 135px;"></div>
 
     <div class ="col-xs">
 
@@ -970,7 +973,7 @@ Your browser does not support HTML video.
     <div class ="col-xs" style="margin-bottom: 20px;">
       <br>
       <label for="baudrate" id="baudratelbl">Baud Rate</label>
-      <select style="float: left; width: 140px" name="baudrate" id="baudrate">
+      <select  name="baudrate" id="baudrate">
         <option value="opt1">115200</option>
         <option value="opt2"></option>
       </select>
@@ -985,14 +988,14 @@ Your browser does not support HTML video.
   
       <br /><br />
       <label for="stopbits" id="stopbitslbl">Stop Bits</label>
-      <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
+      <select  name="Security" id="SecureIOaddress">
         <option value="opt1">1</option>
         <option value="opt2">2</option>
       </select>
       <br /><br />
   
       <label for="parity" id="paritylbl">Parity</label>
-      <select style="float: left; width: 140px" name="parity" id="parity">
+      <select  name="parity" id="parity">
         <option value="opt1">None</option>
         <option value="opt2"></option>
       </select>
@@ -1002,7 +1005,7 @@ Your browser does not support HTML video.
   
       <br /><br />
       <label for="timeout" id = "timeoutlbl" >Timeout</label>
-      <input type="text" id="timeout" style = "margin-left: 50px;" name="timeout" />&nbsp;
+      <input type="text" id="timeout" name="timeout" />&nbsp;
       <br /><br />
 
 
@@ -1019,22 +1022,22 @@ Your browser does not support HTML video.
     <h3>General</h3>
     <br>
     <label for="output" id="outputlbl">Output (TX) width</label>
-    <input type="text" style="width: 132px" id="output" name="output" />
+    <input type="text" id="output" name="output" />
     <br /><br />
     <label for="outputperiod" id="outputperiodlbl">Output (TX) period</label>
-    <input type="text" style="width: 132px" id="outputperiod" name="outputperiod" />
+    <input type="text" id="outputperiod" name="outputperiod" />
     <br><br>
     <h3>Input</h3>
     <br>
     <label for="input" id="inputlbl">Input Format(RX)</label>
-    <select style="float: left; width: 140px" name="input" id="input">
+    <select  name="input" id="input">
       <option value="opt1">26 bits</option>
       <option value="opt2"></option>
     </select>
     <br><br>
-    <input type="checkbox" id="serialsuspend" style="width:20px; height:20px; margin-left: 28px;" name="serialsuspend"
+    <input type="checkbox" id="serialsuspend"  name="serialsuspend"
       value="FR">
-    <label for="serialsuspend" style="float: left; size: 20px; margin-left: -15px;margin-top: 5px;"
+    <label for="serialsuspend" 
       id="serialsuspend">Suspend serial port based IClass</label>    <br>
 
 
@@ -1060,37 +1063,37 @@ Your browser does not support HTML video.
 
 
     <label for="outputformat" id="outputformatlbl" >Output Format</label>
-    <select style="float: left; width: 140px; " name="outputformat" id="outputformat">
+    <select name="outputformat" id="outputformat">
       <option value="opt1">26 bits</option>
       <option value="opt2"></option>
     </select>
     <br><br>
 
     <label for="outputfacility" id="outputfacilitylbl" >Output Facility Code</label>
-    <input type="text" style="width: 132px;" id="outputfacility" name="outputfacility" /><br /><br /> <br>
+    <input type="text" id="outputfacility" name="outputfacility" /><br /><br /> <br>
 
     <h3>When user fails to identify output:</h3>
     <br>
 
     <label for="facilitycodecard" id = "facilitycodelbl">Facility Code </label>
-    <input type="text" id="facilitycode" style="width: 132px; " name="facilitycode" />
+    <input type="text" id="facilitycode"  name="facilitycode" />
 
     <br><br>
 
     <label for="cardnumber" id = "cardnumberlbl" >Card Number</label>
-    <input type="text" id="cardnumber" style="width: 132px;" name="cardnumber" />
+    <input type="text" id="cardnumber" name="cardnumber" />
     <br><br>
 
     <h3>When no biomteric presented:</h3>
     <br>
 
     <label for="facilitycodebio" id = "facilitycodebiolbl">Facility Code </label>
-    <input type="text" id="Port" style="width: 132px;" name="facilitycodebio" />
+    <input type="text" id="Port" name="facilitycodebio" />
     <br><br>
 
 
     <label for="cardnumberbio" id = "cardnumberbiolbl">Card Number</label>
-    <input type="text" id="cardnumberbio" style="width: 132px; " name="cardnumberbio" />
+    <input type="text" id="cardnumberbio" name="cardnumberbio" />
     <br>
 
 
@@ -1116,32 +1119,33 @@ Your browser does not support HTML video.
   <div class ="col-xs" style="margin-bottom: 20px;">
 
     <label for="regularconnection">RS 232</label>
-<label id="regswitch" class="switch" style="margin-left: -80px;">
+<label id="regswitch" class="switch" >
   <input id="rs232" type="checkbox" onclick="ch($(this));">
   <span class="slider round"></span>
 </label>
+<br>
 <label for="sslconnection">RS 485</label>
-<label id="sslswitch" class="switch" style="margin-left: -80px;">
+<label id="sslswitch" class="switch" >
   <input id="rs485" type="checkbox" onclick="ch1($(this));">
   <span class="slider round"></span>
 </label>
 <br><br>
-<div id="RSBOX" style=" border-style: groove; width:500px; margin-left: 30px;">
+<div id="RSBOX" style=" border-style: groove; width:500px;">
   <br>
   <label for="Security" id="SecureIOaddress">Baud Rate</label>
-  <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
+  <select  name="Security" id="SecureIOaddress">
     <option value="opt1">115200</option>
     <option value="opt2"></option>
   </select>
   <br /><br />
   <label for="Security" id="SecureIOaddress">Stop Bits</label>
-  <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
+  <select  name="Security" id="SecureIOaddress">
     <option value="opt1">1</option>
     <option value="opt2">2</option>
   </select>
   <br /><br />
   <label for="Security" id="SecureIOaddress">Parity</label>
-  <select style="float: left; width: 140px" name="Security" id="SecureIOaddress">
+  <select name="Security" id="SecureIOaddress">
     <option value="opt1">None</option>
     <option value="opt2"></option>
   </select>
@@ -1153,12 +1157,12 @@ Your browser does not support HTML video.
 <br><br><br>
 
 <label for="regularconnection">USB</label>
-<label id="usbswitch" class="switch" style="margin-left: -80px;">
+<label id="usbswitch" class="switch">
   <input id="usb" type="checkbox" onclick="ch2($(this));">
   <span class="slider round"></span>
 </label>
 <br><br>
-<div id="usb" style="border-style: groove; width:500px; margin-left: 30px;">
+<div id="usb" style="border-style: groove; width:500px; ">
   <br>
   <label for="striketime">USB Port#:</label>
   <input type="number" class="size-36" value="0" min="0" max="10" step="1">
@@ -1166,17 +1170,17 @@ Your browser does not support HTML video.
 </div>
 <br><br><br>
 <label for="regularconnection">Network</label>
-<label id="usbswitch" class="switch" style="margin-left: -80px;">
+<label id="usbswitch" class="switch" >
   <input id="network" type="checkbox" onclick="ch3($(this));">
   <span class="slider round"></span>
 </label>
 <br><br>
-<div id="network"  style="border-style: groove; width:500px; margin-left: 30px;">
+<div id="network"  style="border-style: groove; width:500px;">
   <br>
   <label for="ipaddress">IP Address</label>
-  <input type="text" id="ipaddress" name="ipaddress" style="margin-left: -80px;"><br><br>
+  <input type="text" id="ipaddress" name="ipaddress"><br><br>
   <label for="Port">Port </label>
-  <input type="Port" id="Port" name="Port" style="margin-left: -80px;">
+  <input type="Port" id="Port" name="Port">
   <br><br> <br> <br>
 </div>
 
@@ -1212,12 +1216,11 @@ Your browser does not support HTML video.
  <label for="time" id = "timelbl">Time (min)</label>
  <input type="number" class="size-36" value="0" min="0" max="10" step="1">
  <br><br>
- <input type="checkbox" id="failurenotifcations" style="width:20px; height:20px; margin-left: 230px;" name="FRcb"
+ <input type="checkbox" id="failurenotifcations"  name="FRcb"
    value="FR">
- <label for="softanti" id ="softantilbl" style="float: left; size: 20px; margin-left: -15px;margin-top: 5px; "
+ <label for="softanti" id ="softantilbl" 
    id="softanti">Soft Anti-passback</label>
  <br><br>
- <h4></h4>
 
 
   </div>
@@ -1235,18 +1238,18 @@ Your browser does not support HTML video.
       <div class="row">
         <div class="col-xs" style="margin-bottom: 10px;">
           <label for="monitoringip" id="monitoringiplbl">IP Address</label>
-          <input type="text" id="monitoringip" name="monitoringip" style="margin-left: -80px;"><br><br>
+          <input type="text" id="monitoringip" name="monitoringip"><br><br>
           <label for="monitoringport">Port</label>
-          <input type="text" id="monitoringport" name="monitoringport" style="margin-left: -80px;"><br><br><br>
+          <input type="text" id="monitoringport" name="monitoringport"><br><br>
       
       
-          <input type="checkbox" id="failurenotifcations" style="width:30px; height:25px; margin-left: 149px;" name="FRcb"
+          <input type="checkbox" id="failurenotifcations" name="FRcb"
             value="FR">
-          <label for="failurenotifications" style="float: left; size: 20px; margin-left: -15px; "
+          <label for="failurenotifications" 
             id="failurenotificationslbl">Repeated failure attempts notification</label>
           <br><br>
-          <label for="attemptslabel" style="margin-left: 155px;" id="attemptslbl">Number of attempts:</label>
-          <input type="text" id="attempts" name="attempts" style="margin-left: -30px; width: 30px ;height: 25px;;"><br><br>
+          <label for="attemptslabel" id="attemptslbl">Number of attempts:</label>
+          <input type="text" id="attempts" name="attempts" ><br><br>
           <br>
         
         </div>
@@ -1314,24 +1317,23 @@ Your browser does not support HTML video.
 <div class="row">
   <div class="col-xs" style="margin-bottom: 10px;">
     <label for="ipaddress">IP Address</label>
-    <input type="text" id="pcidaddress" name="pciaddress" style="margin-left: -80px;"><br><br>
+    <input type="text" id="pcidaddress" name="pciaddress"><br><br>
     <label for="port">Port</label>
-    <input type="text" id="pcport" name="pcport" style="margin-left: -80px;"><br><br><br>
+    <input type="text" id="pcport" name="pcport"><br><br>
 
 
-    <input type="checkbox" id="failurenotifcations" style="width:30px; height:25px; margin-left: 149px;" name="FRcb"
+    <input type="checkbox" id="failurenotifcations"  name="FRcb"
       value="FR">
-    <label for="failurenotifications" style="float: left; size: 20px; margin-left: -15px; "
+    <label for="failurenotifications"
       id="failurenotificationslbl">Send Images from camera</label>
     <br><br>
-    <label for="imagenum" style="margin-left: 155px;" id="imagenumlbl">Number of images:</label>
-    <input type="text" id="imagenum" name="imagenum" style="margin-left: -30px; width: 30px ;height: 25px;;"><br><br>
+    <label for="imagenum"  id="imagenumlbl">Number of images:</label>
+    <input type="text" id="imagenum" name="imagenum" ><br><br>
     <br><br>
   
   </div>
   <br><br>
 </div>
-<h4></h4>
 
   </div>
   </div>
@@ -1374,7 +1376,7 @@ Your browser does not support HTML video.
           <option value="opt2">On</option>
         
         </select>
-        <br><br><br><br>
+        <br><br>
     
         <label for="Manual">Database saving option</label>
         <select name="Security" id="SecureIObehavior">
@@ -1383,11 +1385,11 @@ Your browser does not support HTML video.
         
         </select> 
         <br><br>
-        <button id= "users" style= "width: 100px;height:25px;background-color: #EA4333;color: rgb(255, 255, 255);float: left; margin-left: 200px; border: 0px; font-size: 12px;">Change</button>
+        <button id= "change" >Change</button>
     
     
     
-        <br><br>
+        <br><br><br>
       
       
       </div>
@@ -1409,26 +1411,26 @@ Your browser does not support HTML video.
       <label for="Date">Date</label>
       <input type="date" id="Date" name="Date">
     </form>
-<br><br>
+<br>
 
     <form action="/action_page.php">
       <label for="time">Time</label>
-      <input type="time" style="width: 150px;" id="time" name="time">
+      <input type="time"  id="time" name="time">
     </form>
-<br><br><BR>
-<input type="checkbox" id="failurenotifcations" style="width:20px; height:20px; margin-left: 28px;" name="FRcb"
+<br>
+<input type="checkbox" id="failurenotifcations"  name="FRcb"
 value="FR">
-<label for="Security" style="float: left; size: 20px; margin-left: -15px;margin-top: 5px;"
-id="SecureIOaddress">Enable NTP?</label>
+<label for="Security" 
+id="SecureIOaddress">Enable NTP</label>
 
-<br /><br /><br>
+<br /><br />
 
 <label for="NTPipaddress" >NTP Path </label>
-<input type="text" id="secureio" name="ipaddress" style="width: 150px;">
+<input type="text" id="secureio" name="ipaddress" >
 <br><br>
 
     <label for="Security" id=Security >NTP Continent</label>
-    <select name="Security" id="Security" style="width: 150px;">
+    <select name="Security" id="Security" >
       <option value="opt1">Africa</option>
       <option value="opt2">America</option>
       <option value="opt3">Antartica</option>
@@ -1457,20 +1459,15 @@ id="SecureIOaddress">Enable NTP?</label>
 </div>
 
 
-
-
-
-
-
   <h4>Maintenance</h4>
 
   <br>
-  <div class ="row">
+  <div id= "Maintenance "class ="row">
 
     <div class="container" style="margin-left: 0%; ">
 
-      <button id= "users" style="width: 100px;height:25px;background-color: #EA4333;color: rgb(255, 255, 255); margin-left: 150px; border: 0px; font-size: 12px;">Reboot</button>
-      <button id= "users" style="width: 100px;height:25px;background-color: #EA4333;color: rgb(255, 255, 255); margin-left: 20px;border: 0px;font-size: 12px;">Factory Reset</button> 
+      <button id="reboot" >Reboot</button>
+      <button id="reset" > Reset</button> 
       <br><br><br>
 
 
@@ -1488,7 +1485,6 @@ id="SecureIOaddress">Enable NTP?</label>
 
 
   <br><br>
-  <h4></h4>
   </div>
   
   
