@@ -45,6 +45,52 @@ body {
 
    }
 
+   #communicationports,#fingerprintsettings
+   {
+    margin-left: 0%; 
+   }
+
+
+   #stream
+   {
+     width: 700px;
+   }
+   #margin20{
+
+    margin-bottom: 20px;
+
+   }
+
+   #margin0
+   {
+     margin: 0;
+   }
+
+   #width50
+   {
+     width: 50px;
+   }
+
+   #width30
+   {
+     width: 30px;
+   }
+   
+   #width45
+   {
+     width:45px;
+   }
+   #width135
+   {
+     width: 135px;
+   }
+
+   #elevatorbox
+   {
+    border-style: groove;
+    width:500px;
+   }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -142,10 +188,7 @@ input#relaytiming
 {
   width: 20px;
 }
-select#SecureIObehavior,select#SecureIOaddress
-{
-  width: 100px;
-}
+
 #clear
 {
   width: 100px;
@@ -268,8 +311,17 @@ select#SecureIObehavior,select#SecureIOaddress
    margin-left: 120px;
   }
 
+  #reset
+  {
+   background-color:  #EA4333;
+   color: white; 
+   font-size: 12px;
+   width: 90px;
+   height: 25px;
+   margin-left: 30px;
+  }
 
-  #reboot,#reset
+  #reboot
   {
    background-color:  #EA4333;
    color: white; 
@@ -372,8 +424,6 @@ select#SecureIObehavior,select#SecureIOaddress
   </div>
 
 
-  <br><br>
-
   
   
 
@@ -432,9 +482,9 @@ select#SecureIObehavior,select#SecureIOaddress
     <br>
 
 
-    <div class="container" style="margin-left: 0%; " >
+    <div id="communicationports" class="container"  >
       <div class="row">
-        <div class="col-xs" style="margin-bottom: 20px;">
+        <div id="margin20" class="col-xs" >
           <label for="Port">Port </label>
           <input type="Port" id="Port" name="Port" >
           <br> <br>
@@ -442,7 +492,8 @@ select#SecureIObehavior,select#SecureIOaddress
           <label for="sslport">SSL Port</label>
           <input type="sslPort" id="sslPort" name="sslPort">
         </div>
-        <div class="col-xs" style="width: 50px;"></div>
+        
+        <div id="width50"class="col-xs"></div>
 
 
       
@@ -504,7 +555,7 @@ select#SecureIObehavior,select#SecureIOaddress
     <br>
     <h4>Live View</h4>
     <br>
-<video id="stream" width="700" controls>
+<video id="stream"  controls>
 <source src="mov_bbb.mp4" type="video/mp4">
 Your browser does not support HTML video.
 </video><br><br>
@@ -517,10 +568,17 @@ Your browser does not support HTML video.
 
 <label for="resolution">Resolution</label>
 <select name="resolution" id="resolution">
-<option value="opt1">1280x720 (16:9)</option>
-<option value="opt2">Saab</option>
-<option value="opt3">Opel</option>
-<option value="opt4">Audi</option>
+<option value="opt1">3072x1728 (16:9)</option>
+<option value="opt2">2720x1536 (16:9)</option>
+<option value="opt3">2560x1440 (16:9)</option>
+<option value="opt4">1920x1080 (16:9)</option>
+<option value="opt5">1280x720 (16:9)</option>
+<option value="opt6">800x450 (16:9)</option>
+<option value="opt7">640x360 (16:9)</option>
+<option value="opt8">480x270 (16:9)</option>
+<option value="opt9">320x180 (16:9)</option>
+<option value="opt10">160x90 (16:9)</option>
+
 </select>
 <br><br>
 <label for="framerate">Frame Rate</label>
@@ -529,8 +587,8 @@ Your browser does not support HTML video.
 
 
 <label for="compression">Compression</label>
-    <input type="range" id="myRange" min="0" max="10" value="5">
-   <span id="demo"></span> 
+    <input type="range" id="myRange3" min="0" max="100" value="50">
+   <span id="demo3"></span> 
 <br><br>
 <div id = orientation>
 <h4>Image Orientation</h4>  
@@ -584,11 +642,11 @@ Your browser does not support HTML video.
   <br>
   <h4>Fingerprint Settings</h4>
   <br>
-  <div class="container" style="margin-left: 0%; " >
+  <div id="fingerprintsettings" class="container"  >
 
 
     <div class="row">
-      <div class="col-xs" style="margin-bottom: 10px;">
+      <div id="margin20" class="col-xs" >
         <label for="identification" id="identificationlbl">Identification Mode</label>
   <select name="identification" id="identification">
     <option value="opt1">Local Identification</option>
@@ -627,17 +685,17 @@ Your browser does not support HTML video.
 
       <br><br>
 
-      <label for="fr" style=" size: 20px; " id="frlbl">Use FR</label>
+      <label for="fr"  id="frlbl">Use FR</label>
       <input type="checkbox" id="FR"  name="FRcb" value="FR">
   
       <br><br>
 
 
       </div>
-      <div class="col-xs" style="width: 50px;"></div>
+      <div id = "width50" class="col-xs"></div>
 
 
-      <div class="col-xs" style="margin-bottom: 20px;">
+      <div id="margin20"class="col-xs" >
         <label for="timeout" id="timeoutlbl">Timeout</label>
         <input id ="myRange2"  type="range" min="0" max="10" value="5" > 	&nbsp;
         <span id="demo2"></span>
@@ -681,7 +739,7 @@ Your browser does not support HTML video.
   <h4>Palm Settings</h4>
   <br>
   <div class="row">
-    <div class="col-xs" style="margin-bottom: 10px;">
+    <div id="margin20" class="col-xs" >
       <label for="Security" id=Security>Security</label>
   <select name="Security" id="Security" >
     <option value="opt1">Normal</option>
@@ -703,10 +761,10 @@ Your browser does not support HTML video.
   
     </div>
 
-    <div class="col-xs" style="width: 30px;"></div>
+    <div id= "width30" class="col-xs" ></div>
 
 
-    <div class="col-xs"  style="margin-bottom: 20px;">
+    <div id="margin20" class="col-xs"  >
       <label for="guidemode" id=latency>Guide Mode</label>
       <label id="guidemode" class="switch" >
         <input type ="checkbox" >
@@ -748,11 +806,17 @@ Your browser does not support HTML video.
     <h4>General</h4>
     <br>
     <div class="row">
-      <div class="col-xs" style="margin-bottom: 10px;">
+      <div class="col-xs" id="margin20">
         <label for="identification" id="identificationlbl">Identification Mode</label>
         <select name="identification" id="identification">
           <option value="opt1">Local Identification</option>
-          <option value="opt2"></option>
+          <option value="opt2">PC Identification</option>
+          <option value="opt3">Identification by Secure IO</option>
+          <option value="opt4">Verification</option>
+          <option value="opt5">Verification by Secure IO</option>
+          <option value="opt6">Template on Card</option>
+          <option value="opt7">Template on Card by Secure IO</option>
+      
         </select>
 
         <br> <br>
@@ -792,9 +856,9 @@ Your browser does not support HTML video.
 
       </div>
 
-      <div class="col-xs" style="width: 50px;"></div>
+      <div id = "width50" class="col-xs"></div>
 
-      <div class="col-xs" style="margin-bottom: 20px; ">
+      <div id="margin20" class="col-xs" >
         <label for="schedule" id="schedulelbl" >Schedule Mode</label>
         <label class="switch">
           <input type="checkbox" id="schedule" />
@@ -841,7 +905,7 @@ Your browser does not support HTML video.
     <h4> Relay Timing </h4>
     <br>
     <div class="row">
-      <div class="col-xs" >
+      <div id="margin20"class="col-xs" >
       
         <label for="striketime" id="striketimelbl">Strike Time</label>
         <input type="text" id="striketime" name="striketime"  />&nbsp;
@@ -853,7 +917,7 @@ Your browser does not support HTML video.
       
       </div>
 
-      <div class="col-xs" style="width: 45px;"></div>
+      <div id = "width45" class="col-xs" ></div>
 
       <div class="col-xs" >
       
@@ -903,7 +967,7 @@ Your browser does not support HTML video.
   <br>
 
   <div class= "row">
-    <div class ="col-xs" style="margin-bottom: 20px;">
+    <div id="margin20" class ="col-xs" >
 
       <label for="exitpush">Exit Push Button</label>
     <label class="switch" id = "exitpush">
@@ -932,7 +996,7 @@ Your browser does not support HTML video.
     </div>
     <br>
     
-    <div class="col-xs" style="width: 135px;"></div>
+    <div id="width135" class="col-xs" ></div>
 
     <div class ="col-xs">
 
@@ -970,7 +1034,7 @@ Your browser does not support HTML video.
 
   
   <div class= "row">
-    <div class ="col-xs" style="margin-bottom: 20px;">
+    <div id="margin20" class ="col-xs">
       <br>
       <label for="baudrate" id="baudratelbl">Baud Rate</label>
       <select  name="baudrate" id="baudrate">
@@ -1014,7 +1078,7 @@ Your browser does not support HTML video.
   <br>
 <h4>Wiegand</h4>
 <div class = "row">
-  <div class ="col-xs" style="margin-bottom: 20px;">
+  <div id="margin20" class ="col-xs" >
 
     <br>
 
@@ -1116,7 +1180,7 @@ Your browser does not support HTML video.
 <br>
 
 <div class ="row">
-  <div class ="col-xs" style="margin-bottom: 20px;">
+  <div id="margin20" class ="col-xs" >
 
     <label for="regularconnection">RS 232</label>
 <label id="regswitch" class="switch" >
@@ -1130,7 +1194,7 @@ Your browser does not support HTML video.
   <span class="slider round"></span>
 </label>
 <br><br>
-<div id="RSBOX" style=" border-style: groove; width:500px;">
+<div id="elevatorbox" >
   <br>
   <label for="Security" id="SecureIOaddress">Baud Rate</label>
   <select  name="Security" id="SecureIOaddress">
@@ -1162,7 +1226,7 @@ Your browser does not support HTML video.
   <span class="slider round"></span>
 </label>
 <br><br>
-<div id="usb" style="border-style: groove; width:500px; ">
+<div id="elevatorbox" >
   <br>
   <label for="striketime">USB Port#:</label>
   <input type="number" class="size-36" value="0" min="0" max="10" step="1">
@@ -1175,7 +1239,7 @@ Your browser does not support HTML video.
   <span class="slider round"></span>
 </label>
 <br><br>
-<div id="network"  style="border-style: groove; width:500px;">
+<div id="elevatorbox">
   <br>
   <label for="ipaddress">IP Address</label>
   <input type="text" id="ipaddress" name="ipaddress"><br><br>
@@ -1234,9 +1298,9 @@ Your browser does not support HTML video.
     <br>
     <h4>Monitoring</h4>
     <br>
-    <div class="container" style="margin-left: 0%; " >
+    <div id = "margin0" class="container"  >
       <div class="row">
-        <div class="col-xs" style="margin-bottom: 10px;">
+        <div id="margin20" class="col-xs">
           <label for="monitoringip" id="monitoringiplbl">IP Address</label>
           <input type="text" id="monitoringip" name="monitoringip"><br><br>
           <label for="monitoringport">Port</label>
@@ -1261,7 +1325,7 @@ Your browser does not support HTML video.
 <h4>Monitoring Message Filter</h4>
 <br>
 <div class="row">
-  <div class="col-xs" style="margin-bottom: 10px;">
+  <div id="margin20" class="col-xs" >
    
 <label for="accessgranted">Access Granted</label>
 <label class="switch" >
@@ -1315,7 +1379,7 @@ Your browser does not support HTML video.
 <h4>PC Identification</h4>
 <br>
 <div class="row">
-  <div class="col-xs" style="margin-bottom: 10px;">
+  <div  id="margin20"class="col-xs" >
     <label for="ipaddress">IP Address</label>
     <input type="text" id="pcidaddress" name="pciaddress"><br><br>
     <label for="port">Port</label>
@@ -1347,7 +1411,7 @@ Your browser does not support HTML video.
   <h4>General</h4>
     <br>
     <div class ="row">
-      <div class="container" style="margin-left: 0%; ">
+      <div id = "margin0" class="container" >
       
         <label for="Security" id="SecureIObehavior">Language settings</label>
         <select name="Security" id="SecureIObehavior">
@@ -1405,8 +1469,7 @@ Your browser does not support HTML video.
 <br>
 
 <div class ="row">
-<div class="container" style="margin-left: 0%; ">
-  <div class="container" style="margin-left: 0%; ">
+  <div id = "margin0" class="container">
     <form action="/action_page.php">
       <label for="Date">Date</label>
       <input type="date" id="Date" name="Date">
@@ -1458,13 +1521,13 @@ id="SecureIOaddress">Enable NTP</label>
 
 </div>
 
-
+</div>
   <h4>Maintenance</h4>
 
   <br>
   <div id= "Maintenance "class ="row">
 
-    <div class="container" style="margin-left: 0%; ">
+    <div id = "margin0" class="container" >
 
       <button id="reboot" >Reboot</button>
       <button id="reset" > Reset</button> 
@@ -1495,13 +1558,6 @@ id="SecureIOaddress">Enable NTP</label>
 
   <script>
 
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
-
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
 
 var slider = document.getElementById("myRange2");
   var output = document.getElementById("demo2");
@@ -1517,6 +1573,16 @@ var slider = document.getElementById("myRange2");
   
   slider2.oninput = function() {
     output2.innerHTML = this.value;
+  }
+
+
+  
+  var slider3 = document.getElementById("myRange3");
+  var output3 = document.getElementById("demo3");
+  output2.innerHTML = slider.value;
+  
+  slider3.oninput = function() {
+    output3.innerHTML = this.value;
   }
 
 
