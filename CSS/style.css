@@ -101,6 +101,11 @@ input {
   
 }
 
+#text
+{
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+}
 input#Encryption
 {
   width: 140px;

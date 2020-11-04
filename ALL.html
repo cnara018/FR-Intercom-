@@ -27,7 +27,10 @@ input,select
 {
   width: 132px;
 }
-text{
+
+#text
+{
+  font-family: Verdana, sans-serif;
   font-size: 12px;
 }
 body {
@@ -309,6 +312,7 @@ input#relaytiming
    width: 90px;
    height: 25px;
    margin-left: 120px;
+   border: none;
   }
 
   #reset
@@ -319,6 +323,7 @@ input#relaytiming
    width: 90px;
    height: 25px;
    margin-left: 30px;
+   border: none;
   }
 
   #reboot
@@ -329,6 +334,7 @@ input#relaytiming
    width: 90px;
    height: 25px;
    margin-left: 120px;
+   border: none;
 
   }
 
@@ -339,8 +345,13 @@ input#relaytiming
    font-size: 12px;
    width: 90px;
    height: 25px;
-   
+   border: none;
   }
+
+  
+#hidden_div {
+    display: none;
+}
  
   .sidebar {
     margin: 0;
@@ -623,12 +634,28 @@ Your browser does not support HTML video.
 </label><br><br>
 
 <label for="imagemode" id = imglabel >Image mode</label>
-<select name="imagemode" id="imagemode">
-<option value="opt1">Color Mode</option>
-<option value="opt2">IR 18:00</option>
-<option value="opt3">Regular 08:00</option>
+<select name="imagemode" id="imagemode" onchange="showDiv('hidden_div', this)">
+<option value="1">Color</option>
+<option value="2">IR </option>
+<option value="3">Timed</option>
 </select>
 <br><br>
+<div id="hidden_div">
+  <form action="/action_page.php">
+    <label for="time">Color Mode</label>
+   From: <input type="time"  id="time" name="time"> to <input type="time"  id="time" name="time">
+  </form>
+<br>
+
+<form action="/action_page.php">
+  <label for="time">Ir Mode</label>
+ From: <input type="time"  id="time" name="time"> to <input type="time"  id="time" name="time">
+</form>
+<br><br>
+
+
+
+</div>
 
 
 </div>
@@ -805,6 +832,7 @@ Your browser does not support HTML video.
     <br>
     <h4>General</h4>
     <br>
+    
     <div class="row">
       <div class="col-xs" id="margin20">
         <label for="identification" id="identificationlbl">Identification Mode</label>
@@ -851,7 +879,7 @@ Your browser does not support HTML video.
         <input type="checkbox" id="FR"  name="FRcb" value="FR">
 
 
-        <br><br>
+        <br>
 
 
       </div>
@@ -912,7 +940,7 @@ Your browser does not support HTML video.
         <br><br>
         <label for="doorheld" id="doorheldlbl">Door Held Time</label>
         <input type="text" id="doorheldext" name="doorheld" />&nbsp;
-        <br><br>
+        <br>
       
       
       </div>
@@ -1557,6 +1585,16 @@ id="SecureIOaddress">Enable NTP</label>
 
 
   <script>
+
+
+function showDiv(divId, element)
+{
+    document.getElementById(divId).style.display = element.value == 3 ? 'block' : 'none';
+}
+
+
+
+
 
 
 var slider = document.getElementById("myRange2");
