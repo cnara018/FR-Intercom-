@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="CSS/style.css">
 
 
-  <title>Device Settings - Network</title>
+  <title>Device Settings</title>
 
 
 
@@ -23,7 +23,7 @@
     <br>
     <img src="icons/IdentyTech logo - white.png" alt="Flowers" >
     <br><br><br>
-   ><a class="link active" href="#Network"> <img id="icons" src="icons/icons8-thin-client-50.png"> &nbsp; Network</a>
+    <a class="link active" href="#Network"> <img id="icons" src="icons/icons8-thin-client-50.png"> &nbsp;&nbsp; Network</a>
     <a class="link" href="#SIP"> <img id="icons" src="icons/icons8-phone-50.png"> &nbsp;&nbsp; SIP</a>
     <a class="link" href="#Camera" > <img id="icons" src="icons/icons8-camera-50.png"> &nbsp;&nbsp;&nbsp;Camera</a>
     <a class="link" href="#Biometric"><img id="icons" src="icons/icons8-fingerprint-accepted-50.png"> &nbsp;&nbsp;&nbsp;Biometric</a>
@@ -238,6 +238,8 @@ Your browser does not support HTML video.
 <option value="3">Timed</option>
 </select>
 <br><br>
+
+
 <div id="hidden_div">
   <form action="/action_page.php">
     <label for="time">Color Mode</label>
@@ -430,7 +432,7 @@ Your browser does not support HTML video.
     <br>
     <h4>General</h4>
     <br>
-    
+    <div id="fingerprintsettings" class="container"  >
     <div class="row">
       <div class="col-xs" id="margin20">
         <label for="identification" id="identificationlbl">Identification Mode</label>
@@ -665,7 +667,11 @@ Your browser does not support HTML video.
       <label for="baudrate" id="baudratelbl">Baud Rate</label>
       <select  name="baudrate" id="baudrate">
         <option value="opt1">115200</option>
-        <option value="opt2"></option>
+        <option value="opt2">57600</option>
+        <option value="opt3">38400</option>
+        <option value="opt4">19200</option>
+        <option value="opt5">9600</option>
+
       </select>
   
       <br><br>
@@ -680,14 +686,16 @@ Your browser does not support HTML video.
       <label for="stopbits" id="stopbitslbl">Stop Bits</label>
       <select  name="Security" id="SecureIOaddress">
         <option value="opt1">1</option>
-        <option value="opt2">2</option>
+        <option value="opt2">0</option>
       </select>
       <br /><br />
   
       <label for="parity" id="paritylbl">Parity</label>
       <select  name="parity" id="parity">
         <option value="opt1">None</option>
-        <option value="opt2"></option>
+        <option value="opt2">Odd</option>
+        <option value="opt3">Even</option>
+
       </select>
       <br /><br />
       <label for="address" id = "addresslbl">Address</label>
@@ -722,7 +730,20 @@ Your browser does not support HTML video.
     <label for="input" id="inputlbl">Input Format(RX)</label>
     <select  name="input" id="input">
       <option value="opt1">26 bits</option>
-      <option value="opt2"></option>
+      <option value="opt2">31 bits</option>
+      <option value="opt3">32 bits</option>
+      <option value="opt4">33 bits</option>
+      <option value="opt5">34 bits</option>
+      <option value="opt6">35 bits</option>
+      <option value="opt7">37 bits</option>
+      <option value="opt8">42 bits</option>
+      <option value="opt9">56 bits</option>
+      <option value="opt10">49 bits</option>
+      <option value="opt11">40 bits</option>
+      <option value="opt12">48 bits</option>
+      <option value="opt13">26 bits swapped parities</option>
+      <option value="opt14">26 bit Kantech</option>
+
     </select>
     <br><br>
     <input type="checkbox" id="serialsuspend"  name="serialsuspend"
@@ -755,7 +776,19 @@ Your browser does not support HTML video.
     <label for="outputformat" id="outputformatlbl" >Output Format</label>
     <select name="outputformat" id="outputformat">
       <option value="opt1">26 bits</option>
-      <option value="opt2"></option>
+      <option value="opt2">31 bits</option>
+      <option value="opt3">32 bits</option>
+      <option value="opt4">33 bits</option>
+      <option value="opt5">34 bits</option>
+      <option value="opt6">35 bits</option>
+      <option value="opt7">37 bits</option>
+      <option value="opt8">42 bits</option>
+      <option value="opt9">56 bits</option>
+      <option value="opt10">49 bits</option>
+      <option value="opt11">40 bits</option>
+      <option value="opt12">48 bits</option>
+      <option value="opt13">26 bits swapped parities</option>
+      <option value="opt14">26 bit Kantech</option>
     </select>
     <br><br>
 
@@ -798,7 +831,7 @@ Your browser does not support HTML video.
 
 
 
-
+</div>
 </div>
 <br>
 
@@ -825,19 +858,24 @@ Your browser does not support HTML video.
   <label for="Security" id="SecureIOaddress">Baud Rate</label>
   <select  name="Security" id="SecureIOaddress">
     <option value="opt1">115200</option>
-    <option value="opt2"></option>
+    <option value="opt2">57600</option>
+    <option value="opt3">38400</option>
+    <option value="opt4">19200</option>
+    <option value="opt5">9600</option>
   </select>
   <br /><br />
   <label for="Security" id="SecureIOaddress">Stop Bits</label>
   <select  name="Security" id="SecureIOaddress">
     <option value="opt1">1</option>
-    <option value="opt2">2</option>
+    <option value="opt2">0</option>
   </select>
   <br /><br />
   <label for="Security" id="SecureIOaddress">Parity</label>
   <select name="Security" id="SecureIOaddress">
     <option value="opt1">None</option>
-    <option value="opt2"></option>
+    <option value="opt2">Odd</option>
+    <option value="opt3">Even</option>
+
   </select>
   <br /><br />
   <label for="striketime">Address</label>

@@ -161,21 +161,18 @@ label#regswitch.switch,label#sslswitch.switch
   float: left;
 }
 
-input#FR
+input#FR,input#disableunit
 {
   margin-left: -60px;
 }
 
 select{
   font-size: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   height: 25px;
 }
 
-#spoofthreshold
-{
-  margin-top: 10px;
-}
+
 
 
 
